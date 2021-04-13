@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/pages/*": ["./src/component/pages/*"],
+      "@/atoms/*": ["./src/component/atoms/*"],
+      "@/molecules/*": ["./src/component/molecules/*"],
+      "@/templates/*": ["./src/component/templates/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
