@@ -1,5 +1,17 @@
+import tw, { styled } from 'twin.macro';
+
+const Layout = styled.div`
+  ${tw`box-border border-4 m-8 p-8 flex justify-center`}
+`;
+
+const Text = styled.div`
+  ${tw`bg-blue-300`}
+`;
+
 const IndexPage = () => (
-  <div>Almost before we knew it, we had left the ground.</div>
+  <Layout>
+    <Text>Almost before we knew it, we had left the ground.</Text>
+  </Layout>
 );
 
 export default IndexPage;
