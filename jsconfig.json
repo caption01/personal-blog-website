@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/pages/*": ["./src/component/pages/*"],
       "@/atoms/*": ["./src/component/atoms/*"],
       "@/molecules/*": ["./src/component/molecules/*"],
+      "@/organisms/*": ["./src/component/organisms/*"],
       "@/templates/*": ["./src/component/templates/*"]
     }
   },

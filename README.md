@@ -13,3 +13,8 @@
     #### .babelrc and jsconfig.json (vscode path mapping)
 
     - https://stackoverflow.com/questions/62382506/visual-studio-code-cick-through-go-to-does-not-work-with-path-aliases-in-jsc
+
+
+    #### twin issue
+
+    - tw & styled component pattern https://github.com/ben-rogerson/twin.macro/issues/17
