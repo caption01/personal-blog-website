@@ -18,3 +18,4 @@
     #### twin issue
 
     - tw & styled component pattern https://github.com/ben-rogerson/twin.macro/issues/17
+    - tw & icon component styling css pattern https://github.com/ben-rogerson/twin.macro/discussions/393
