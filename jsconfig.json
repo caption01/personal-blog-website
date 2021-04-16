@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "preserve",
+    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "@/pages/*": ["./src/component/pages/*"],

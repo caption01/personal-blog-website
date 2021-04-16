@@ -1,3 +1,9 @@
-const P = ({ children }) => <p>{children}</p>;
+import tw, { styled } from 'twin.macro';
 
-export default P;
+const StyledH1 = styled.h1`
+  ${props => tw`text-8xl`}
+`;
+
+const Header = ({ children }) => <StyledH1>{children}</StyledH1>;
+
+export { Header };

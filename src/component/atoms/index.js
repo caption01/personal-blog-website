@@ -1,4 +1,5 @@
-import P from './typography';
+import { Header } from './typography';
 import Icons from './icons';
+import { ImageFullCover } from './images';
 
-export { P, Icons };
+export { Header, Icons, ImageFullCover };
