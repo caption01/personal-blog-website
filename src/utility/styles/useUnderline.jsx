@@ -1,22 +1,25 @@
-import { useRef, createRef, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import tw, { styled } from 'twin.macro';
 
 const UnderlineStyled = styled.div`
   position: relative;
   transition-duration: 0.5s;
 
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    width: 0rem;
-    height: 0.5rem;
-    margin: 0.5rem 0 0;
-    transition-duration: 0.5s;
-    opacity: 0;
-    background-color: black;
-  }
+  ${({ isDarkMode }) => {
+    return `
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      width: 0rem;
+      height: 0.5rem;
+      margin: 0.5rem 0 0;
+      transition-duration: 0.5s;
+      opacity: 0;
+      background-color: ${isDarkMode ? 'white' : 'black'};
+    }`;
+  }}
 
   &:hover {
     transform: scale(1.1, 1.1);
@@ -31,8 +34,11 @@ const UnderlineStyled = styled.div`
 `;
 
 const useUnderline = WrapperComponent => wrapperProps => {
+  const { theme } = useTheme();
+  const isDarkMode = theme === 'dark';
+
   return (
-    <UnderlineStyled>
+    <UnderlineStyled isDarkMode={isDarkMode}>
       <WrapperComponent {...wrapperProps} />
     </UnderlineStyled>
   );
