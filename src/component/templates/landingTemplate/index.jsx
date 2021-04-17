@@ -1,6 +1,5 @@
 import tw, { styled } from 'twin.macro';
 
-import { ImageFullCover, Header } from '@/atoms/index';
 import { TextAnimated } from '@/utility/styles';
 
 const LandingLayout = styled.div`
@@ -9,7 +8,7 @@ const LandingLayout = styled.div`
 `;
 
 const Grids = styled.div`
-  ${tw`grid grid-cols-2 gap-8 h-full`}
+  ${tw`grid grid-cols-1 gap-8 h-full`}
 `;
 
 const TextContent = styled.div`
@@ -20,13 +19,8 @@ const LandingTemplate = () => (
   <LandingLayout>
     <Grids>
       <TextContent>
-        {/* <Header>Hello</Header>
-          <Header>I'm Nutchapon</Header>
-          <Header>I'm Developer</Header>
-          <Header>I'm Love Dog Lover</Header> */}
         <TextAnimated />
       </TextContent>
-      <ImageFullCover imageSrc="/profile-1.jpg" />
     </Grids>
   </LandingLayout>
 );
