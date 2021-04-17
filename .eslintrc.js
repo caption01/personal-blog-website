@@ -14,6 +14,18 @@ module.exports = {
   settings: {
     react: {
       version: 'detect'
+    },
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@/atoms', './src/component/atoms'],
+          ['@/pages', './src/component/pages'],
+          ['@/molecules', './src/component/molecules'],
+          ['@/organisms', './src/component/organisms'],
+          ['@/templates', './src/component/templates'],
+          ['@/utility/styles', './src/utility/styles']
+        ]
+      }
     }
   },
   extends: ['plugin:react/recommended', 'airbnb', 'prettier'],

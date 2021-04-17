@@ -8,7 +8,8 @@
       "@/atoms/*": ["./src/component/atoms/*"],
       "@/molecules/*": ["./src/component/molecules/*"],
       "@/organisms/*": ["./src/component/organisms/*"],
-      "@/templates/*": ["./src/component/templates/*"]
+      "@/templates/*": ["./src/component/templates/*"],
+      "@/utility/*": ["./src/utility/*"]
     }
   },
   "exclude": ["node_modules"]
