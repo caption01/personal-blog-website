@@ -17,17 +17,17 @@ const Content = styled.div(() => [
 const IconKeyWithUnderline = useUnderline(Icons);
 const IconMoonWithUnderline = useUnderline(Icons);
 
-const TopNavbar = () => {
+const TopNavbar = ({ reset }) => {
   const { theme, setTheme } = useTheme();
 
-  const toggleMode = () => {
-    return theme === 'light' ? setTheme('dark') : setTheme('light');
-  };
+  const toggleMode = () =>
+    theme === 'light' ? setTheme('dark') : setTheme('light');
 
   return (
     <Navbar>
       <Content>
         <IconKeyWithUnderline type="key" />
+        <IconKeyWithUnderline type="refresh" onClick={reset} />
         <IconMoonWithUnderline type="moon" onClick={toggleMode} />
       </Content>
     </Navbar>

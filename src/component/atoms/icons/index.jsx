@@ -1,8 +1,8 @@
-import tw, { styled } from 'twin.macro';
-import { MoonIcon, KeyIcon } from '@heroicons/react/solid';
+import tw from 'twin.macro';
+import { MoonIcon, KeyIcon, RefreshIcon } from '@heroicons/react/solid';
 
 const Icons = ({ type, onClick, ...props }) => {
-  const iconStyle = tw`h-16 w-16 text-gray-900 dark:text-gray-50`;
+  const iconStyle = tw`h-16 w-16 text-black dark:text-white`;
 
   switch (type) {
     case 'moon': {
@@ -11,6 +11,10 @@ const Icons = ({ type, onClick, ...props }) => {
 
     case 'key': {
       return <KeyIcon css={iconStyle} {...props} onClick={onClick} />;
+    }
+
+    case 'refresh': {
+      return <RefreshIcon css={iconStyle} {...props} onClick={onClick} />;
     }
 
     default:

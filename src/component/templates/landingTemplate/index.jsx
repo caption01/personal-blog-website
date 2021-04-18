@@ -1,7 +1,5 @@
 import tw, { styled } from 'twin.macro';
 
-import { TextAnimated } from '@/utility/styles';
-
 const LandingLayout = styled.div`
   ${tw`container mx-auto`};
   height: 75vh;
@@ -11,16 +9,18 @@ const Grids = styled.div`
   ${tw`grid grid-cols-1 gap-8 h-full`}
 `;
 
-const TextContent = styled.div`
-  ${tw`flex flex-col justify-center items-center space-y-12`}
+const StyledText = styled.div`
+  ${tw`flex flex-col justify-center items-center space-y-12
+    text-7xl font-extrabold text-black dark:text-white
+  `}
+
+  line-height: 8rem;
 `;
 
-const LandingTemplate = () => (
+const LandingTemplate = ({ children }) => (
   <LandingLayout>
     <Grids>
-      <TextContent>
-        <TextAnimated />
-      </TextContent>
+      <StyledText>{children}</StyledText>
     </Grids>
   </LandingLayout>
 );

@@ -1,4 +1,4 @@
-import TextAnimated from './textAnimated';
+import useFadeInFadeOut from './useFadeInFadeOut';
 import useUnderline from './useUnderline';
 
-export { TextAnimated, useUnderline };
+export { useFadeInFadeOut, useUnderline };
