@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useTheme } from 'next-themes';
 
+import { TopNavbarWithIcon } from '@/organisms/index';
+import { IconWithFadeIn } from '@/molecules/index';
 import { LandingTemplate } from '@/templates/index';
-import { TopNavbar } from '@/molecules/index';
 import { useFadeInFadeOut } from '@/utility/styles';
 
 const texts = [
@@ -13,17 +15,32 @@ const texts = [
 
 const LandingPage = () => {
   const [done, setDone] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const toggleMode = () =>
+    theme === 'light' ? setTheme('dark') : setTheme('light');
 
   const [FadedComponent, reset] = useFadeInFadeOut({
     renderItems: texts,
-    onFinish: setDone
+    onFinish: setDone,
+    finished: done
   });
 
   return (
     <>
-      <TopNavbar reset={reset} />
+      <TopNavbarWithIcon
+        onSkip={() => setDone(true)}
+        onRefresh={() => reset()}
+        onMoon={() => toggleMode()}
+      />
       <LandingTemplate>
-        <FadedComponent />
+        <>
+          {!done ? (
+            <FadedComponent />
+          ) : (
+            <IconWithFadeIn type="book" active={done} />
+          )}
+        </>
       </LandingTemplate>
     </>
   );

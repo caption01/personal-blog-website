@@ -12,7 +12,10 @@ const createTimeline = (renderItems, setStateItems, cb) => {
     const fadeIn = setTimeout(() => setStateItems(item), start);
     const fadeOut = !isLast
       ? setTimeout(() => setStateItems([]), start + show)
-      : setTimeout(() => cb(), start + show);
+      : setTimeout(() => {
+          setStateItems([]);
+          cb();
+        }, start + show);
 
     acc = [...acc, fadeIn, fadeOut];
 
@@ -24,7 +27,7 @@ const createTimeline = (renderItems, setStateItems, cb) => {
   return mapFn;
 };
 
-const useFadeInFadeOut = ({ renderItems, onFinish }) => {
+const useFadeInFadeOut = ({ renderItems, onFinish, finished }) => {
   const ref = useRef([]);
   const [items, setItems] = useState([]);
 
@@ -50,6 +53,13 @@ const useFadeInFadeOut = ({ renderItems, onFinish }) => {
   }, []);
 
   useEffect(() => refresh(), []);
+
+  useEffect(() => {
+    if (!finished) return;
+    ref.current.map(clearTimeout);
+    ref.current = [];
+    setItems([]);
+  }, [finished]);
 
   const FadedComponent = () => (
     <>

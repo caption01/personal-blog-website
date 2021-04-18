@@ -1,3 +1,5 @@
 import TopNavbar from './topNavbar';
+import IconWithUnderline from './IconWithUnderline';
+import IconWithFadeIn from './IconWithFadeIn';
 
-export { TopNavbar };
+export { TopNavbar, IconWithUnderline, IconWithFadeIn };

@@ -1,5 +1,11 @@
 import tw from 'twin.macro';
-import { MoonIcon, KeyIcon, RefreshIcon } from '@heroicons/react/solid';
+import {
+  MoonIcon,
+  KeyIcon,
+  RefreshIcon,
+  BookOpenIcon,
+  ChevronDoubleRightIcon
+} from '@heroicons/react/solid';
 
 const Icons = ({ type, onClick, ...props }) => {
   const iconStyle = tw`h-16 w-16 text-black dark:text-white`;
@@ -15,6 +21,16 @@ const Icons = ({ type, onClick, ...props }) => {
 
     case 'refresh': {
       return <RefreshIcon css={iconStyle} {...props} onClick={onClick} />;
+    }
+
+    case 'book': {
+      return <BookOpenIcon css={iconStyle} {...props} onClick={onClick} />;
+    }
+
+    case 'skip': {
+      return (
+        <ChevronDoubleRightIcon css={iconStyle} {...props} onClick={onClick} />
+      );
     }
 
     default:
