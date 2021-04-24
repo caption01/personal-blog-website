@@ -1,17 +1,28 @@
 import tw, { styled } from 'twin.macro';
+import { Header } from '@/atoms/index';
 
-const Navbar = styled.div(() => [tw`container mx-auto`, tw`h-36`]);
-const Content = styled.div(() => [
+const Navbar = styled.div(() => [tw`container mx-auto flex`, tw`h-36`]);
+const Right = styled.div(() => [
   tw`flex`,
   tw`h-full w-full`,
   tw`justify-end`,
   tw`items-center`,
   tw`space-x-8`
 ]);
+const Left = styled.div(() => [
+  tw`flex`,
+  tw`h-full w-full`,
+  tw`justify-start`,
+  tw`items-center`,
+  tw`space-x-8`
+]);
 
-const TopNavbar = ({ children }) => (
+const TopNavbar = ({ children, brands }) => (
   <Navbar>
-    <Content>{children}</Content>
+    <Left>
+      <Header>{brands}</Header>
+    </Left>
+    <Right>{children}</Right>
   </Navbar>
 );
 export default TopNavbar;

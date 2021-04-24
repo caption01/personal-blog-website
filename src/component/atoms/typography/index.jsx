@@ -1,9 +1,15 @@
 import tw, { styled } from 'twin.macro';
 
-const StyledH1 = styled.h1`
+const StyledHeader = styled.div`
   ${props => tw`text-8xl`}
 `;
 
-const Header = ({ children }) => <StyledH1>{children}</StyledH1>;
+const Header = ({ children }) => <StyledHeader>{children}</StyledHeader>;
 
-export { Header };
+const StyledTitle = styled.div`
+  ${props => tw`text-4xl`}
+`;
+
+const Title = ({ children }) => <StyledTitle>{children}</StyledTitle>;
+
+export { Header, Title };

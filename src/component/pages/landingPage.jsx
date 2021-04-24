@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from 'next-themes';
+import tw from 'twin.macro';
 
 import { TopNavbarWithIcon } from '@/organisms/index';
 import { IconWithFadeIn } from '@/molecules/index';
@@ -20,7 +21,7 @@ const LandingPage = () => {
   const toggleMode = () =>
     theme === 'light' ? setTheme('dark') : setTheme('light');
 
-  const [FadedComponent, reset] = useFadeInFadeOut({
+  const [AnimatedTexts, reset] = useFadeInFadeOut({
     renderItems: texts,
     onFinish: setDone,
     finished: done
@@ -29,17 +30,15 @@ const LandingPage = () => {
   return (
     <>
       <TopNavbarWithIcon
+        brands="Nutcha:💣"
         onSkip={() => setDone(true)}
         onRefresh={() => reset()}
         onMoon={() => toggleMode()}
       />
       <LandingTemplate>
         <>
-          {!done ? (
-            <FadedComponent />
-          ) : (
-            <IconWithFadeIn type="book" active={done} />
-          )}
+          {!done && <AnimatedTexts />}
+          {done && <IconWithFadeIn type="chevron-down" css={tw`h-32 w-32`} />}
         </>
       </LandingTemplate>
     </>

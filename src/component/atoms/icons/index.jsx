@@ -4,12 +4,12 @@ import {
   KeyIcon,
   RefreshIcon,
   BookOpenIcon,
-  ChevronDoubleRightIcon
+  ChevronDoubleRightIcon,
+  ChevronDoubleDownIcon
 } from '@heroicons/react/solid';
 
 const Icons = ({ type, onClick, ...props }) => {
   const iconStyle = tw`h-16 w-16 text-black dark:text-white`;
-
   switch (type) {
     case 'moon': {
       return <MoonIcon css={iconStyle} {...props} onClick={onClick} />;
@@ -30,6 +30,12 @@ const Icons = ({ type, onClick, ...props }) => {
     case 'skip': {
       return (
         <ChevronDoubleRightIcon css={iconStyle} {...props} onClick={onClick} />
+      );
+    }
+
+    case 'chevron-down': {
+      return (
+        <ChevronDoubleDownIcon css={iconStyle} {...props} onClick={onClick} />
       );
     }
 

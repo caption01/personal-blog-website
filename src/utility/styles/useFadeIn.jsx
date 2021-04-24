@@ -1,26 +1,21 @@
-import { useTransition, animated } from 'react-spring';
+import { useSpring, animated } from 'react-spring';
+import tw, { styled } from 'twin.macro';
 
-const useFadeIn = WrapperComponent => ({ active, ...wrapperProps }) => {
-  const transitions = useTransition(active, null, {
+const StyledDiv = styled.div``;
+
+const useFadeIn = WrapperComponent => wrapperProps => {
+  const props = useSpring({
     from: { opacity: 0 },
-    enter: { opacity: 1 }
+    to: { opacity: 1 },
+    config: { duration: 500 }
   });
 
   return (
-    <>
-      {transitions.map(
-        ({ item, key, props }) =>
-          item && (
-            <animated.div
-              key={key}
-              style={props}
-              onMouseMove={() => console.log('scale up and slide')}
-            >
-              <WrapperComponent {...wrapperProps} />
-            </animated.div>
-          )
-      )}
-    </>
+    <StyledDiv>
+      <animated.div style={props}>
+        <WrapperComponent {...wrapperProps} />
+      </animated.div>
+    </StyledDiv>
   );
 };
 
