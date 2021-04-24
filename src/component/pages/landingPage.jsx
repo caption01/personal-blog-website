@@ -9,7 +9,7 @@ import { useFadeInFadeOut } from '@/utility/styles';
 
 const texts = [
   ['Hi 👋'],
-  ['Welcome', 'To', 'My Spaces 🌏 🌳'],
+  ['Welcome', 'To', '🌏 My Spaces 🌏 '],
   ["I'm", 'Developer 👨‍💻', 'on Web-Application'],
   ['Find Me']
 ];
@@ -39,6 +39,7 @@ const LandingPage = () => {
         <>
           {!done && <AnimatedTexts />}
           {done && <IconWithFadeIn type="chevron-down" css={tw`h-32 w-32`} />}
+          {done && <div>Get Start</div>}
         </>
       </LandingTemplate>
     </>
