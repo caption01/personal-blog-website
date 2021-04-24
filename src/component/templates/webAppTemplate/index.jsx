@@ -2,10 +2,11 @@ import tw, { styled } from 'twin.macro';
 import Image from 'next/image';
 
 import { Title, Text, ImageResponsiveSize } from '@/atoms/index';
+import { TitleTextBlock } from '@/molecules/index';
 
 const Layout = styled.div`
   ${tw`container mx-auto`};
-  height: 75vh;
+  height: 100vh;
 `;
 
 const Grids = styled.div`
@@ -13,18 +14,16 @@ const Grids = styled.div`
   ${tw`justify-items-center items-center`}
 `;
 
+const title = 'Frontend';
+const text =
+  "I'm building web application based on React library with modern UI frame-work such as Tailwind or Antd. Coding with both js & ts language.";
+
 const WebAppTemplate = () => (
   <Layout>
     <Grids>
       <ImageResponsiveSize imageSrc="/web-dev-image.svg" />
       <div>
-        <Title>WebApplication</Title>
-        <Text>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit libero
-          fuga dolores incidunt pariatur, voluptatem est placeat magnam aliquam
-          sequi aliquid dolorum assumenda consectetur omnis quis quae
-          reprehenderit sapiente nemo.
-        </Text>
+        <TitleTextBlock title={title} text={text} />
       </div>
     </Grids>
   </Layout>

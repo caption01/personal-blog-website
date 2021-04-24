@@ -2,7 +2,7 @@ import tw, { styled } from 'twin.macro';
 
 const LandingLayout = styled.div`
   ${tw`container mx-auto`};
-  height: 75vh;
+  height: 100vh;
 `;
 
 const Grids = styled.div`

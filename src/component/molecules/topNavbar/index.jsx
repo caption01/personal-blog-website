@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro';
-import { Header } from '@/atoms/index';
+import { Title } from '@/atoms/index';
 
-const Navbar = styled.div(() => [tw`container mx-auto flex`, tw`h-36`]);
+const Navbar = styled.div(() => [tw`fixed flex`, tw`h-36 w-screen p-8`]);
 const Right = styled.div(() => [
   tw`flex`,
   tw`h-full w-full`,
@@ -20,7 +20,7 @@ const Left = styled.div(() => [
 const TopNavbar = ({ children, brands }) => (
   <Navbar>
     <Left>
-      <Header>{brands}</Header>
+      <Title>{brands}</Title>
     </Left>
     <Right>{children}</Right>
   </Navbar>

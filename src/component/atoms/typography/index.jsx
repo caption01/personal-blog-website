@@ -1,15 +1,15 @@
 import tw, { styled } from 'twin.macro';
 
 const StyledHeader = styled.div`
-  ${props => tw`text-8xl`}
+  ${props => tw`text-8xl font-extrabold mb-4 tracking-wide`}
 `;
 
 const StyledTitle = styled.div`
-  ${props => tw`text-4xl`}
+  ${props => tw`text-6xl font-extrabold mb-4 tracking-wide`}
 `;
 
 const StyledText = styled.div`
-  ${props => tw`text-2xl`}
+  ${props => tw`text-4xl mb-4 tracking-wide`}
 `;
 
 const Header = ({ children }) => <StyledHeader>{children}</StyledHeader>;
