@@ -1,5 +1,5 @@
-import { Header, Title } from './typography';
+import { Header, Title, Text } from './typography';
 import Icons from './icons';
-import { ImageFullCover } from './images';
+import { ImageFullCover, ImageResponsiveSize } from './images';
 
-export { Header, Title, Icons, ImageFullCover };
+export { Header, Title, Text, Icons, ImageFullCover, ImageResponsiveSize };

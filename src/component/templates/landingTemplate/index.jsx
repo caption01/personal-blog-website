@@ -11,7 +11,7 @@ const Grids = styled.div`
 
 const StyledText = styled.div`
   ${tw`flex flex-col justify-center items-center space-y-12
-    text-7xl font-extrabold text-black dark:text-white
+    text-7xl font-extrabold 
   `}
 
   line-height: 8rem;

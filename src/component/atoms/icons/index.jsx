@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/solid';
 
 const Icons = ({ type, onClick, ...props }) => {
-  const iconStyle = tw`h-16 w-16 text-black dark:text-white`;
+  const iconStyle = tw`h-16 w-16`;
   switch (type) {
     case 'moon': {
       return <MoonIcon css={iconStyle} {...props} onClick={onClick} />;

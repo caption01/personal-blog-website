@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import tw from 'twin.macro';
-
+// component
 import { TopNavbarWithIcon } from '@/organisms/index';
 import { IconWithFadeIn } from '@/molecules/index';
-import { LandingTemplate } from '@/templates/index';
+import { LandingTemplate, WebAppTemplate } from '@/templates/index';
+//  utilitys
 import { useFadeInFadeOut } from '@/utility/styles';
 
 const texts = [
@@ -42,6 +43,7 @@ const LandingPage = () => {
           {done && <div>Get Start</div>}
         </>
       </LandingTemplate>
+      <WebAppTemplate />
     </>
   );
 };
