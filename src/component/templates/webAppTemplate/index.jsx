@@ -14,17 +14,22 @@ const Grids = styled.div`
   ${tw`justify-items-center items-center`}
 `;
 
-const title = 'Frontend';
-const text =
-  "I'm building web application based on React library with modern UI frame-work such as Tailwind or Antd. Coding with both js & ts language.";
+const Description = () => (
+  <>
+    <TitleTextBlock title="Develop">
+      <p>
+        I'm frontend developer which using Javascript and Typescript to created
+        maintanable code
+      </p>
+    </TitleTextBlock>
+  </>
+);
 
 const WebAppTemplate = () => (
   <Layout>
     <Grids>
       <ImageResponsiveSize imageSrc="/web-dev-image.svg" />
-      <div>
-        <TitleTextBlock title={title} text={text} />
-      </div>
+      <Description />
     </Grids>
   </Layout>
 );

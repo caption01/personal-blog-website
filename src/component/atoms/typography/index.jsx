@@ -9,7 +9,7 @@ const StyledTitle = styled.div`
 `;
 
 const StyledText = styled.div`
-  ${props => tw`text-4xl mb-4 tracking-wide`}
+  ${props => tw`text-4xl mb-4 tracking-wide leading-relaxed`}
 `;
 
 const Header = ({ children }) => <StyledHeader>{children}</StyledHeader>;

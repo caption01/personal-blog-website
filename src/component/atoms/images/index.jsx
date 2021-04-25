@@ -2,7 +2,7 @@ import Image from 'next/image';
 import tw, { styled } from 'twin.macro';
 
 const ResponseSiveImageContainer = styled.div`
-  ${props => tw`w-11/12 md:w-9/12 lg:w-8/12`}
+  ${props => tw`w-11/12`}
 `;
 
 export const ImageFullCover = ({ imageSrc, alt = 'full-image' }) => (
