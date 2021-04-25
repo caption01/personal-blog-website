@@ -4,7 +4,11 @@ import tw from 'twin.macro';
 // component
 import { TopNavbarWithIcon } from '@/organisms/index';
 import { IconWithFadeIn } from '@/molecules/index';
-import { LandingTemplate, WebAppTemplate } from '@/templates/index';
+import {
+  LandingTemplate,
+  WebAppTemplate,
+  ShuffleTemplate
+} from '@/templates/index';
 //  utilitys
 import { useFadeInFadeOut } from '@/utility/styles';
 
@@ -44,6 +48,7 @@ const LandingPage = () => {
         </>
       </LandingTemplate>
       <WebAppTemplate />
+      <ShuffleTemplate />
     </>
   );
 };
