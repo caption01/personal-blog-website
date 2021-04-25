@@ -7,7 +7,7 @@ const CenterTitle = styled.div`
 `;
 
 const Content = styled.div`
-  ${tw`p-8 text-justify`}
+  ${tw`p-8`}
   text-indent: 4rem;
 `;
 

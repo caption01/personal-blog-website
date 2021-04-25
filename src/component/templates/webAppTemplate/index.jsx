@@ -1,7 +1,6 @@
 import tw, { styled } from 'twin.macro';
-import Image from 'next/image';
 
-import { Title, Text, ImageResponsiveSize } from '@/atoms/index';
+import { ImageResponsiveSize, TextIcons } from '@/atoms/index';
 import { TitleTextBlock } from '@/molecules/index';
 
 const Layout = styled.div`
@@ -18,8 +17,9 @@ const Description = () => (
   <>
     <TitleTextBlock title="Develop">
       <p>
-        I'm frontend developer which using Javascript and Typescript to created
-        maintanable code
+        I'm frontend developer 👨‍💻 which using &nbsp;
+        <TextIcons type="js" /> Javascript &nbsp;
+        <TextIcons type="ts" /> Typescript to created maintanable software.
       </p>
     </TitleTextBlock>
   </>
