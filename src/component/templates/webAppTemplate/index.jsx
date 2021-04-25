@@ -28,8 +28,8 @@ const Description = () => (
 const WebAppTemplate = () => (
   <Layout>
     <Grids>
-      <ImageResponsiveSize imageSrc="/web-dev-image.svg" />
       <Description />
+      <ImageResponsiveSize imageSrc="/web-dev-image.svg" />
     </Grids>
   </Layout>
 );
