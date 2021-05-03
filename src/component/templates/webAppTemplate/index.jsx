@@ -11,6 +11,7 @@ const Layout = styled.div`
 const Grids = styled.div`
   ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full`}
   ${tw`justify-items-center items-center`}
+  max-height: 50%;
 `;
 
 const Description = () => (

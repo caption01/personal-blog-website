@@ -16,3 +16,7 @@ export const ImageResponsiveSize = ({ imageSrc, alt = 'static-image' }) => (
     <Image width={1000} height={1000} alt={alt} src={imageSrc} />
   </ResponseSiveImageContainer>
 );
+
+export const ImageCover = ({ src, alt }) => (
+  <Image alt={alt} src={src} layout="fill" objectFit="contain" />
+);

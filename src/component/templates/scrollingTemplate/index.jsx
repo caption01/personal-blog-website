@@ -2,8 +2,7 @@ import React from 'react';
 import tw, { styled } from 'twin.macro';
 import { map } from 'lodash';
 
-import { Title } from '@/atoms/index';
-import { TitleTextBlock } from '@/molecules/index';
+import { TitleTextBlock, ImageCard } from '@/molecules/index';
 
 const stacks = [
   { title: 'React', path: '/react-icon.svg' },
@@ -14,45 +13,47 @@ const stacks = [
 ];
 
 const Layout = styled.div`
-  ${tw`container mx-auto relative`};
-  height: 200vh;
+  ${tw`container mx-auto`};
+  height: 100vh;
 `;
 
 const Grids = styled.div`
   ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full`}
   ${tw`justify-items-center items-stretch`}
+  max-height: 50%;
 `;
 
-const FixCenter = styled.div`
-  ${tw`sticky top-2/4`}
+const Center = styled.div`
+  ${tw`flex justify-center items-center`}
 `;
 
-const ExpandedImage = styled.div`
-  ${tw`flex flex-col justify-between items-center text-center`}
+const ScrollingBox = styled.div`
+  ${tw`flex justify-between items-center w-full overflow-scroll shadow-inner`}
+`;
+
+const Box = styled.div`
+  ${tw`mr-40`}
 `;
 
 const Description = () => (
-  <div>
-    <FixCenter>
-      <TitleTextBlock title="Stack ❤" />
-    </FixCenter>
-  </div>
+  <Center>
+    <TitleTextBlock title="Stack ❤" />
+  </Center>
 );
 
-const ShuffleTemplate = () => (
+const ScrollingImageTemplate = () => (
   <Layout>
     <Grids>
       <Description />
-      <ExpandedImage>
+      <ScrollingBox>
         {map(stacks, ({ title, path }) => (
-          <div key={path}>
-            <img src={path} alt="imgs" width={200} height={200} />
-            <Title>{title}</Title>
-          </div>
+          <Box key={path}>
+            <ImageCard src={path} alt="imgs" title={title} />
+          </Box>
         ))}
-      </ExpandedImage>
+      </ScrollingBox>
     </Grids>
   </Layout>
 );
 
-export default ShuffleTemplate;
+export default ScrollingImageTemplate;

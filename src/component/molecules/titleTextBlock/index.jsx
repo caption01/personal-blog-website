@@ -16,9 +16,11 @@ const TitleTextBlock = ({ title, children }) => (
     <CenterTitle>
       <Title>{title}</Title>
     </CenterTitle>
-    <Content>
-      <Text>{children}</Text>
-    </Content>
+    {children && (
+      <Content>
+        <Text>{children}</Text>
+      </Content>
+    )}
   </div>
 );
 
