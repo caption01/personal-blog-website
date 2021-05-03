@@ -3,9 +3,10 @@ import tw, { styled } from 'twin.macro';
 import {
   ImageResponsiveSize,
   TextIcons,
-  FullScreenContainer
+  FullScreenContainer,
+  ImageCover
 } from '@/atoms/index';
-import { TitleTextBlock } from '@/molecules/index';
+import { TitleTextBlock, ImageCard } from '@/molecules/index';
 
 const Grids = styled.div`
   ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full`}
@@ -25,11 +26,22 @@ const Description = () => (
   </>
 );
 
+const Frame = styled.div`
+  ${props => tw`w-full h-full overflow-scroll shadow-inner`}
+`;
+
 const WebAppTemplate = () => (
   <FullScreenContainer>
     <Grids>
       <Description />
-      <ImageResponsiveSize imageSrc="/web-dev-image.svg" />
+      <Frame>
+        <ImageCard
+          src="/web-dev-image.svg"
+          alt="image"
+          title="quality"
+          size="lg"
+        />
+      </Frame>
     </Grids>
   </FullScreenContainer>
 );

@@ -24,7 +24,7 @@ const Center = styled.div`
 `;
 
 const ScrollingBox = styled.div`
-  ${tw`flex justify-between items-center w-full overflow-scroll shadow-inner`}
+  ${tw`flex w-full overflow-scroll shadow-inner`}
 `;
 
 const Box = styled.div`
@@ -44,7 +44,7 @@ const ScrollingImageTemplate = () => (
       <ScrollingBox>
         {map(stacks, ({ title, path }) => (
           <Box key={path}>
-            <ImageCard src={path} alt="imgs" title={title} />
+            <ImageCard src={path} alt="imgs" title={title} size="md" />
           </Box>
         ))}
       </ScrollingBox>
