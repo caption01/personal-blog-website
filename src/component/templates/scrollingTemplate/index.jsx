@@ -3,6 +3,7 @@ import tw, { styled } from 'twin.macro';
 import { map } from 'lodash';
 
 import { TitleTextBlock, ImageCard } from '@/molecules/index';
+import { FullScreenContainer } from '@/atoms/index';
 
 const stacks = [
   { title: 'React', path: '/react-icon.svg' },
@@ -11,11 +12,6 @@ const stacks = [
   { title: 'Antd', path: '/antd-icon.svg' },
   { title: 'GraphQL', path: '/graphql-icon.png' }
 ];
-
-const Layout = styled.div`
-  ${tw`container mx-auto`};
-  height: 100vh;
-`;
 
 const Grids = styled.div`
   ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full`}
@@ -42,7 +38,7 @@ const Description = () => (
 );
 
 const ScrollingImageTemplate = () => (
-  <Layout>
+  <FullScreenContainer>
     <Grids>
       <Description />
       <ScrollingBox>
@@ -53,7 +49,7 @@ const ScrollingImageTemplate = () => (
         ))}
       </ScrollingBox>
     </Grids>
-  </Layout>
+  </FullScreenContainer>
 );
 
 export default ScrollingImageTemplate;

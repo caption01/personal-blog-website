@@ -1,9 +1,6 @@
 import tw, { styled } from 'twin.macro';
 
-const LandingLayout = styled.div`
-  ${tw`container mx-auto`};
-  height: 100vh;
-`;
+import { FullScreenContainer } from '@/atoms/index';
 
 const Grids = styled.div`
   ${tw`grid grid-cols-1 gap-8 h-full`}
@@ -18,11 +15,11 @@ const StyledText = styled.div`
 `;
 
 const LandingTemplate = ({ children }) => (
-  <LandingLayout>
+  <FullScreenContainer>
     <Grids>
       <StyledText>{children}</StyledText>
     </Grids>
-  </LandingLayout>
+  </FullScreenContainer>
 );
 
 export default LandingTemplate;

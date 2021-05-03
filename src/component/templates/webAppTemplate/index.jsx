@@ -1,12 +1,11 @@
 import tw, { styled } from 'twin.macro';
 
-import { ImageResponsiveSize, TextIcons } from '@/atoms/index';
+import {
+  ImageResponsiveSize,
+  TextIcons,
+  FullScreenContainer
+} from '@/atoms/index';
 import { TitleTextBlock } from '@/molecules/index';
-
-const Layout = styled.div`
-  ${tw`container mx-auto`};
-  height: 100vh;
-`;
 
 const Grids = styled.div`
   ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full`}
@@ -27,12 +26,12 @@ const Description = () => (
 );
 
 const WebAppTemplate = () => (
-  <Layout>
+  <FullScreenContainer>
     <Grids>
       <Description />
       <ImageResponsiveSize imageSrc="/web-dev-image.svg" />
     </Grids>
-  </Layout>
+  </FullScreenContainer>
 );
 
 export default WebAppTemplate;
