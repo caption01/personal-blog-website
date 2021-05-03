@@ -1,5 +1,5 @@
 import LandingTemplate from './landingTemplate';
 import WebAppTemplate from './webAppTemplate';
-import ShuffleTemplate from './shuffleTemplate';
+import ScrollingTemplate from './scrollingTemplate';
 
-export { LandingTemplate, WebAppTemplate, ShuffleTemplate };
+export { LandingTemplate, WebAppTemplate, ScrollingTemplate };

@@ -31,11 +31,6 @@ const ExpandedImage = styled.div`
   ${tw`flex flex-col justify-between items-center text-center`}
 `;
 
-const shuffleWithFrequence = (array = []) => {
-  const [initial, ...rest] = array;
-  return [...rest, initial];
-};
-
 const Description = () => (
   <div>
     <FixCenter>

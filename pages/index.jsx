@@ -1,5 +1,5 @@
-import LandingPage from '@/pages/landingPage';
+import HomePage from '@/pages/homePage';
 
-const IndexPage = () => <LandingPage />;
+const IndexPage = () => <HomePage />;
 
 export default IndexPage;
