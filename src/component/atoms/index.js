@@ -1,17 +1,17 @@
 import { Header, Title, Text } from './typography';
 import Icons from './icons';
-import { ImageFullCover, ImageResponsiveSize, ImageCover } from './images';
+import ImageCover from './images';
 import TextIcons from './textIcons';
 import FullScreenContainer from './Layout';
+import LinkButton from './LinkButton';
 
 export {
   Header,
   Title,
   Text,
   Icons,
-  ImageFullCover,
-  ImageResponsiveSize,
   ImageCover,
   TextIcons,
-  FullScreenContainer
+  FullScreenContainer,
+  LinkButton
 };

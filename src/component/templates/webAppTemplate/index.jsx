@@ -1,11 +1,6 @@
 import tw, { styled } from 'twin.macro';
 
-import {
-  ImageResponsiveSize,
-  TextIcons,
-  FullScreenContainer,
-  ImageCover
-} from '@/atoms/index';
+import { TextIcons, FullScreenContainer } from '@/atoms/index';
 import { TitleTextBlock, ImageCard } from '@/molecules/index';
 
 const Grids = styled.div`

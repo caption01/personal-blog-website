@@ -7,7 +7,8 @@ import { IconWithFadeIn } from '@/molecules/index';
 import {
   LandingTemplate,
   WebAppTemplate,
-  ScrollingTemplate
+  ScrollingTemplate,
+  SelectionTemplate
 } from '@/templates/index';
 import { useFadeInFadeOut } from '@/utility/styles';
 
@@ -48,6 +49,7 @@ const LandingPage = () => {
       </LandingTemplate>
       <WebAppTemplate />
       <ScrollingTemplate />
+      <SelectionTemplate />
     </>
   );
 };
