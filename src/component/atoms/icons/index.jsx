@@ -14,19 +14,15 @@ const Icons = ({ type, onClick, ...props }) => {
     case 'moon': {
       return <MoonIcon css={iconStyle} {...props} onClick={onClick} />;
     }
-
     case 'key': {
       return <KeyIcon css={iconStyle} {...props} onClick={onClick} />;
     }
-
     case 'refresh': {
       return <RefreshIcon css={iconStyle} {...props} onClick={onClick} />;
     }
-
     case 'book': {
       return <BookOpenIcon css={iconStyle} {...props} onClick={onClick} />;
     }
-
     case 'skip': {
       return (
         <ChevronDoubleRightIcon css={iconStyle} {...props} onClick={onClick} />

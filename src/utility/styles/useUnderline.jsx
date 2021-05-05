@@ -5,8 +5,7 @@ const UnderlineStyled = styled.div`
   position: relative;
   transition-duration: 0.5s;
 
-  ${({ isDarkMode }) => {
-    return `
+  ${({ isDarkMode }) => `
     &:before,
     &:after {
       content: '';
@@ -18,27 +17,30 @@ const UnderlineStyled = styled.div`
       transition-duration: 0.5s;
       opacity: 0;
       background-color: ${isDarkMode ? 'white' : 'black'};
-    }`;
-  }}
+    }`}
 
-  &:hover {
-    transform: scale(1.1, 1.1);
-    transform: translate(0, -0.3rem);
-    cursor: pointer;
-    &:after {
-      left: 0;
-      width: 100%;
-      opacity: 1;
+  ${({ line }) => `
+    &:hover {
+      transform: scale(1.1, 1.1);
+      transform: translate(0, -0.3rem);
+      cursor: pointer;
+      &:after {
+        left: 0;
+        width: ${line ? '100%' : 0};
+        opacity: 1;
+      }
     }
-  }
+  `}
 `;
 
 const useUnderline = WrapperComponent => wrapperProps => {
   const { theme } = useTheme();
   const isDarkMode = theme === 'dark';
 
+  const { line = true } = wrapperProps;
+
   return (
-    <UnderlineStyled isDarkMode={isDarkMode}>
+    <UnderlineStyled isDarkMode={isDarkMode} line={line}>
       <WrapperComponent {...wrapperProps} />
     </UnderlineStyled>
   );

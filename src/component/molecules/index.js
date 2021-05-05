@@ -4,6 +4,7 @@ import IconWithFadeIn from './iconWithFadeIn';
 import TitleTextBlock from './titleTextBlock';
 import ImageCard from './imageCard';
 import SelectionCard from './selectionCard';
+import Footer from './footer';
 
 export {
   TopNavbar,
@@ -11,5 +12,6 @@ export {
   IconWithFadeIn,
   TitleTextBlock,
   ImageCard,
-  SelectionCard
+  SelectionCard,
+  Footer
 };

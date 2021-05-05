@@ -3,7 +3,7 @@ import { useTheme } from 'next-themes';
 import tw from 'twin.macro';
 
 import { TopNavbarWithIcon } from '@/organisms/index';
-import { IconWithFadeIn } from '@/molecules/index';
+import { IconWithFadeIn, Footer } from '@/molecules/index';
 import {
   LandingTemplate,
   PersonTemplate,
@@ -50,6 +50,7 @@ const LandingPage = () => {
       <PersonTemplate />
       <ScrollingTemplate />
       <SelectionTemplate />
+      <Footer />
     </>
   );
 };
