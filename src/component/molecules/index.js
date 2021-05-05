@@ -1,9 +1,9 @@
 import TopNavbar from './topNavbar';
-import IconWithUnderline from './IconWithUnderline';
-import IconWithFadeIn from './IconWithFadeIn';
+import IconWithUnderline from './iconWithUnderline';
+import IconWithFadeIn from './iconWithFadeIn';
 import TitleTextBlock from './titleTextBlock';
-import ImageCard from './ImageCard';
-import SelectionCard from './SelectionCard';
+import ImageCard from './imageCard';
+import SelectionCard from './selectionCard';
 
 export {
   TopNavbar,

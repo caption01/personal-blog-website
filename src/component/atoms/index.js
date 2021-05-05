@@ -2,8 +2,8 @@ import { Header, Title, Text } from './typography';
 import Icons from './icons';
 import ImageCover from './images';
 import TextIcons from './textIcons';
-import FullScreenContainer from './Layout';
-import LinkButton from './LinkButton';
+import FullScreenContainer from './layout';
+import LinkButton from './linkButton';
 
 export {
   Header,

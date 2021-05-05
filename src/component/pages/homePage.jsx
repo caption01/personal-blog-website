@@ -6,7 +6,7 @@ import { TopNavbarWithIcon } from '@/organisms/index';
 import { IconWithFadeIn } from '@/molecules/index';
 import {
   LandingTemplate,
-  WebAppTemplate,
+  PersonTemplate,
   ScrollingTemplate,
   SelectionTemplate
 } from '@/templates/index';
@@ -47,7 +47,7 @@ const LandingPage = () => {
           {done && <div>Get Start</div>}
         </>
       </LandingTemplate>
-      <WebAppTemplate />
+      <PersonTemplate />
       <ScrollingTemplate />
       <SelectionTemplate />
     </>

@@ -25,7 +25,7 @@ const Frame = styled.div`
   ${props => tw`w-full h-full overflow-scroll shadow-inner`}
 `;
 
-const WebAppTemplate = () => (
+const PersonTemplate = () => (
   <FullScreenContainer>
     <Grids>
       <Description />
@@ -41,4 +41,4 @@ const WebAppTemplate = () => (
   </FullScreenContainer>
 );
 
-export default WebAppTemplate;
+export default PersonTemplate;
