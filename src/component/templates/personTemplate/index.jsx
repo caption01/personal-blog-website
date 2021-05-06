@@ -11,7 +11,7 @@ const Grids = styled.div`
 
 const Description = () => (
   <>
-    <TitleTextBlock title="Develop">
+    <TitleTextBlock title="Develop 👨‍">
       <p>
         I'm frontend developer 👨‍💻 which using &nbsp;
         <TextIcons type="js" /> Javascript &nbsp;

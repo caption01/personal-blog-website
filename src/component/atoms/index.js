@@ -4,6 +4,7 @@ import ImageCover from './images';
 import TextIcons from './textIcons';
 import FullScreenContainer from './layout';
 import LinkButton from './linkButton';
+import Spacer from './spacer';
 
 export {
   Header,
@@ -13,5 +14,6 @@ export {
   ImageCover,
   TextIcons,
   FullScreenContainer,
-  LinkButton
+  LinkButton,
+  Spacer
 };

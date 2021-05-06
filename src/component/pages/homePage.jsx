@@ -1,57 +1,40 @@
 import { useState } from 'react';
-import { useTheme } from 'next-themes';
+// import { useTheme } from 'next-themes';
 import tw from 'twin.macro';
 
-import { TopNavbarWithIcon } from '@/organisms/index';
-import { IconWithFadeIn, Footer } from '@/molecules/index';
+// import { TopNavbarWithIcon } from '@/organisms/index';
+import { Footer, TopNavbar } from '@/molecules/index';
 import {
   LandingTemplate,
   PersonTemplate,
   ScrollingTemplate,
   SelectionTemplate
 } from '@/templates/index';
-import { useFadeInFadeOut } from '@/utility/styles';
+import styled from 'styled-components';
 
-const texts = [
-  ['Hi 👋'],
-  ['Welcome', 'To', '🌏 My Spaces 🌏 '],
-  ["I'm", 'Developer 👨‍💻', 'on Web-Application'],
-  ['Find Me']
-];
+const Layout = styled.div`
+  ${tw`relative`}
+`;
 
 const LandingPage = () => {
   const [done, setDone] = useState(false);
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
-  const toggleMode = () =>
-    theme === 'light' ? setTheme('dark') : setTheme('light');
+  // const toggleMode = () =>
+  //   theme === 'light' ? setTheme('dark') : setTheme('light');
 
-  const [AnimatedTexts, reset] = useFadeInFadeOut({
-    renderItems: texts,
-    onFinish: setDone,
-    finished: done
-  });
+  const onSkip = () => setDone(true);
+  const onFinish = status => setDone(status);
 
   return (
-    <>
-      <TopNavbarWithIcon
-        brands="Nutcha:💣"
-        onSkip={() => setDone(true)}
-        onRefresh={() => reset()}
-        onMoon={() => toggleMode()}
-      />
-      <LandingTemplate>
-        <>
-          {!done && <AnimatedTexts />}
-          {done && <IconWithFadeIn type="chevron-down" css={tw`h-32 w-32`} />}
-          {done && <div>Get Start</div>}
-        </>
-      </LandingTemplate>
+    <Layout>
+      <TopNavbar brands="Nutcha:💣" />
+      <LandingTemplate done={done} onSkip={onSkip} onFinish={onFinish} />
       <PersonTemplate />
       <ScrollingTemplate />
       <SelectionTemplate />
       <Footer />
-    </>
+    </Layout>
   );
 };
 

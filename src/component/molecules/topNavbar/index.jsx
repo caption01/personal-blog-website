@@ -1,7 +1,11 @@
 import tw, { styled } from 'twin.macro';
 import { Title } from '@/atoms/index';
 
-const Navbar = styled.div(() => [tw`fixed flex`, tw`h-36 w-screen p-8`]);
+const Navbar = styled.div`
+  ${tw`fixed flex h-24 w-screen p-4 sticky`}
+  top: 0;
+`;
+
 const Right = styled.div(() => [
   tw`flex`,
   tw`h-full w-full`,

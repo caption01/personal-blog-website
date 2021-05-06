@@ -33,7 +33,7 @@ const Box = styled.div`
 
 const Description = () => (
   <Center>
-    <TitleTextBlock title="Stack ❤" />
+    <TitleTextBlock title="Stack ❤️" />
   </Center>
 );
 
