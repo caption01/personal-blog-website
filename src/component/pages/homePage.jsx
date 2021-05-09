@@ -2,7 +2,6 @@ import { useState } from 'react';
 // import { useTheme } from 'next-themes';
 import tw from 'twin.macro';
 
-// import { TopNavbarWithIcon } from '@/organisms/index';
 import { Footer, TopNavbar } from '@/molecules/index';
 import {
   LandingTemplate,
@@ -28,7 +27,7 @@ const LandingPage = () => {
 
   return (
     <Layout>
-      <TopNavbar brands="Nutcha:💣" />
+      <TopNavbar />
       <LandingTemplate done={done} onSkip={onSkip} onFinish={onFinish} />
       <PersonTemplate />
       <ScrollingTemplate />

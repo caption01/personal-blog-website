@@ -31,7 +31,7 @@ const Menu = styled.div`
   transition: 0.5s;
 `;
 
-const TopNavbar = ({ children, brands }) => (
+const TopNavbar = () => (
   <Navbar>
     <Left>
       <Frame>
