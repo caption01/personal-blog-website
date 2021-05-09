@@ -7,6 +7,7 @@
     - https://dev.to/devsmranjan/styling-react-components-styled-components-twin-macro-tailwind-css-2-0-3cnk
 
     - https://medium.com/the-existing/try-emotion-twin-and-tailwind-with-nextjs-beginner-a7eff2301e1b
+
     - https://karmasakshi.medium.com/the-correct-way-of-adding-tailwind-to-your-next-js-app-66b590eef2a2
 
 
@@ -18,4 +19,12 @@
     #### twin issue
 
     - tw & styled component pattern https://github.com/ben-rogerson/twin.macro/issues/17
+
     - tw & icon component styling css pattern https://github.com/ben-rogerson/twin.macro/discussions/393
+
+
+    #### Add icon fav
+
+    - https://nextjs.org/docs/advanced-features/custom-document
+
+    - https://reactgo.com/nextjs-change-favicon/
