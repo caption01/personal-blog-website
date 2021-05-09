@@ -28,3 +28,10 @@
     - https://nextjs.org/docs/advanced-features/custom-document
 
     - https://reactgo.com/nextjs-change-favicon/
+
+
+    #### navbar scroll & debound lodash process (react performance)
+
+    - https://ellenaua.medium.com/throttle-debounce-behavior-lodash-6bcae1494e03
+
+    - https://www.prwhite.io/blog/sticky-navbar-hides-scroll
