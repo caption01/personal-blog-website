@@ -1,6 +1,7 @@
 import tw, { styled } from 'twin.macro';
 
 import { Title, ImageCover, AntdIcons } from '@/atoms/index';
+import { map } from 'lodash';
 
 const Navbar = styled.div`
   ${tw`fixed flex h-24 w-screen p-4 sticky bg-white z-10 shadow-md`}
@@ -31,23 +32,38 @@ const Menu = styled.div`
   transition: 0.5s;
 `;
 
+const menu = [
+  {
+    icon: 'robot',
+    section: 'person'
+  },
+  {
+    icon: 'fire',
+    section: 'stack'
+  },
+  {
+    icon: 'app',
+    section: 'select'
+  }
+];
+
 const TopNavbar = () => (
   <Navbar>
     <Left>
       <Frame>
-        <ImageCover alt="logo" src="/nh-logo-3.png" />
+        <a href="#main">
+          <ImageCover alt="logo" src="/nh-logo-3.png" />
+        </a>
       </Frame>
     </Left>
     <Right>
-      <Menu>
-        <AntdIcons type="robot" />
-      </Menu>
-      <Menu>
-        <AntdIcons type="fire" />
-      </Menu>
-      <Menu>
-        <AntdIcons type="app" />
-      </Menu>
+      {map(menu, ({ icon, section }) => (
+        <Menu key={icon}>
+          <a href={`#${section}`}>
+            <AntdIcons type={icon} />
+          </a>
+        </Menu>
+      ))}
     </Right>
   </Navbar>
 );
