@@ -7,6 +7,7 @@ import { map, debounce } from 'lodash';
 const Navbar = styled.div`
   ${tw`fixed flex h-24 w-screen p-4 sticky bg-white z-10 shadow-md transform duration-300`}
   ${props => `opacity: ${props.visible ? '1' : '0'}`};
+  ${props => `visibility: ${props.visible ? 'visibility' : 'hidden'}`};
   top: 0;
 `;
 
