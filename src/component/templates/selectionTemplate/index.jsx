@@ -17,22 +17,24 @@ const Col = styled.div`
 `;
 
 const SelectionTemplate = () => (
-  <FullScreenContainer>
-    <Header>
-      <TitleTextBlock title="More 🚀" />
-    </Header>
-    <Grids>
-      <Col>
-        <SelectionCard src="/project.svg" link="projects" title="PROJECT" />
-      </Col>
-      <Col>
-        <SelectionCard src="/blog.svg" link="blogs" title="ARTICLE" />
-      </Col>
-      <Col>
-        <SelectionCard src="/demo.svg" link="Demos" title="DEMO" />
-      </Col>
-    </Grids>
-  </FullScreenContainer>
+  <section id="select">
+    <FullScreenContainer>
+      <Header>
+        <TitleTextBlock title="More 🚀" />
+      </Header>
+      <Grids>
+        <Col>
+          <SelectionCard src="/project.svg" link="projects" title="PROJECT" />
+        </Col>
+        <Col>
+          <SelectionCard src="/blog.svg" link="blogs" title="ARTICLE" />
+        </Col>
+        <Col>
+          <SelectionCard src="/demo.svg" link="Demos" title="DEMO" />
+        </Col>
+      </Grids>
+    </FullScreenContainer>
+  </section>
 );
 
 export default SelectionTemplate;

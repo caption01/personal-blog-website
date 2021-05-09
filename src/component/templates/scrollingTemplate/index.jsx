@@ -38,18 +38,20 @@ const Description = () => (
 );
 
 const ScrollingImageTemplate = () => (
-  <FullScreenContainer>
-    <Grids>
-      <Description />
-      <ScrollingBox>
-        {map(stacks, ({ title, path }) => (
-          <Box key={path}>
-            <ImageCard src={path} alt="imgs" title={title} size="md" />
-          </Box>
-        ))}
-      </ScrollingBox>
-    </Grids>
-  </FullScreenContainer>
+  <section id="stack">
+    <FullScreenContainer>
+      <Grids>
+        <Description />
+        <ScrollingBox>
+          {map(stacks, ({ title, path }) => (
+            <Box key={path}>
+              <ImageCard src={path} alt="imgs" title={title} size="md" />
+            </Box>
+          ))}
+        </ScrollingBox>
+      </Grids>
+    </FullScreenContainer>
+  </section>
 );
 
 export default ScrollingImageTemplate;

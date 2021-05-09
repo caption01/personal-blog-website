@@ -39,21 +39,25 @@ const LandingTemplate = ({ done, onSkip, onFinish }) => {
   const onRefresh = () => reset();
 
   return (
-    <FullScreenContainer>
-      <Grids>
-        <StyledText>
-          <>
-            {!done && <AnimatedTexts />}
-            {done && <IconWithFadeIn type="chevron-down" css={tw`h-32 w-32`} />}
-            {done && <div>Get Start</div>}
-          </>
-        </StyledText>
-        <BoxIcon>
-          <IconWithUnderline type="skip" onClick={onSkip} />
-          <IconWithUnderline type="refresh" onClick={onRefresh} />
-        </BoxIcon>
-      </Grids>
-    </FullScreenContainer>
+    <section id="main">
+      <FullScreenContainer>
+        <Grids>
+          <StyledText>
+            <>
+              {!done && <AnimatedTexts />}
+              {done && (
+                <IconWithFadeIn type="chevron-down" css={tw`h-32 w-32`} />
+              )}
+              {done && <div>Get Start</div>}
+            </>
+          </StyledText>
+          <BoxIcon>
+            <IconWithUnderline type="skip" onClick={onSkip} />
+            <IconWithUnderline type="refresh" onClick={onRefresh} />
+          </BoxIcon>
+        </Grids>
+      </FullScreenContainer>
+    </section>
   );
 };
 

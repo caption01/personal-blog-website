@@ -26,19 +26,21 @@ const Frame = styled.div`
 `;
 
 const PersonTemplate = () => (
-  <FullScreenContainer>
-    <Grids>
-      <Description />
-      <Frame>
-        <ImageCard
-          src="/web-dev-image.svg"
-          alt="image"
-          title="quality"
-          size="lg"
-        />
-      </Frame>
-    </Grids>
-  </FullScreenContainer>
+  <section id="person">
+    <FullScreenContainer>
+      <Grids>
+        <Description />
+        <Frame>
+          <ImageCard
+            src="/web-dev-image.svg"
+            alt="image"
+            title="quality"
+            size="lg"
+          />
+        </Frame>
+      </Grids>
+    </FullScreenContainer>
+  </section>
 );
 
 export default PersonTemplate;

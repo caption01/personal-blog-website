@@ -24,7 +24,9 @@ const Left = styled.div(() => [
 const TopNavbar = ({ children, brands }) => (
   <Navbar>
     <Left>
-      <Title>{brands}</Title>
+      <Title>
+        <a href="#main">{brands}</a>
+      </Title>
     </Left>
     <Right>{children}</Right>
   </Navbar>
