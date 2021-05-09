@@ -1,16 +1,16 @@
 import tw, { styled } from 'twin.macro';
 
-import { FullScreenContainer } from '@/atoms/index';
-import { IconWithUnderline, IconWithFadeIn } from '@/molecules/index';
-import { useFadeInFadeOut } from '@/utility/styles';
+import { FullScreenContainer, AntdIcons } from '@/atoms/index';
+import { IconWithFadeIn } from '@/molecules/index';
+import { useFadeInFadeOut, useUnderline } from '@/utility/styles';
 
 const Grids = styled.div`
-  ${tw`grid grid-cols-1 gap-8 h-full relative shadow-inner`}
+  ${tw`grid grid-cols-1 gap-8 h-full relative shadow-md`}
 `;
 
 const StyledText = styled.div`
   ${tw`flex flex-col justify-center items-center space-y-12
-    text-7xl font-extrabold 
+    text-4xl md:text-5xl lg:text-7xl font-bold 
   `}
 
   line-height: 8rem;
@@ -29,6 +29,8 @@ const texts = [
   ['Find Me']
 ];
 
+const IconWithUnderline = useUnderline(AntdIcons);
+
 const LandingTemplate = ({ done, onSkip, onFinish }) => {
   const [AnimatedTexts, reset] = useFadeInFadeOut({
     renderItems: texts,
@@ -46,14 +48,27 @@ const LandingTemplate = ({ done, onSkip, onFinish }) => {
             <>
               {!done && <AnimatedTexts />}
               {done && (
-                <IconWithFadeIn type="chevron-down" css={tw`h-32 w-32`} />
+                <IconWithFadeIn
+                  type="chevron-down"
+                  css={tw`h-16 w-16 md:h-32 w-32`}
+                />
               )}
               {done && <div>Get Start</div>}
             </>
           </StyledText>
           <BoxIcon>
-            <IconWithUnderline type="skip" onClick={onSkip} />
-            <IconWithUnderline type="refresh" onClick={onRefresh} />
+            <IconWithUnderline
+              type="forward"
+              size="mdlg"
+              onClick={onSkip}
+              setMoblie
+            />
+            <IconWithUnderline
+              type="undo"
+              size="mdlg"
+              onClick={onRefresh}
+              setMoblie
+            />
           </BoxIcon>
         </Grids>
       </FullScreenContainer>

@@ -5,6 +5,7 @@ import TextIcons from './textIcons';
 import FullScreenContainer from './layout';
 import LinkButton from './linkButton';
 import Spacer from './spacer';
+import AntdIcons from './antIcons';
 
 export {
   Header,
@@ -15,5 +16,6 @@ export {
   TextIcons,
   FullScreenContainer,
   LinkButton,
-  Spacer
+  Spacer,
+  AntdIcons
 };
