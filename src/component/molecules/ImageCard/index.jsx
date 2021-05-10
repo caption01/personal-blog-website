@@ -15,7 +15,7 @@ const Frame = styled.div`
 const ImageCard = ({ src, alt, title, size = 'md' }) => {
   const config = {
     md: tw`w-80 h-80`,
-    lg: `width: 40rem; height: 40rem;`
+    lg: tw`w-11/12 lg:w-10/12 h-30r lg:h-40r`
   };
 
   return (

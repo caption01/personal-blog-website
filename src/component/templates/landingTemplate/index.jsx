@@ -6,6 +6,7 @@ import { useFadeInFadeOut, useUnderline } from '@/utility/styles';
 
 const Grids = styled.div`
   ${tw`grid grid-cols-1 gap-8 h-full relative shadow-md`}
+  ${tw`max-h-full lg:max-h-3/4`}
 `;
 
 const StyledText = styled.div`

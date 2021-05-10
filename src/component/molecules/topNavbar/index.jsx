@@ -57,13 +57,13 @@ const TopNavbar = () => {
   const handleScroll = () => {
     const currentScorll = window.pageYOffset;
 
-    if (currentScorll > prevScrollPos && currentScorll - prevScrollPos > 100) {
+    if (currentScorll > prevScrollPos && currentScorll - prevScrollPos > 50) {
       setScrollPos(currentScorll);
       setVisible(false);
     }
 
     if (
-      (prevScrollPos > currentScorll && prevScrollPos - currentScorll > 100) ||
+      (prevScrollPos > currentScorll && prevScrollPos - currentScorll > 50) ||
       currentScorll < 100
     ) {
       setScrollPos(currentScorll);
@@ -71,7 +71,7 @@ const TopNavbar = () => {
     }
   };
 
-  const delayScroll = debounce(handleScroll, 100);
+  const delayScroll = debounce(handleScroll, 50);
 
   useEffect(() => {
     window.addEventListener('scroll', delayScroll);

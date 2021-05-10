@@ -1,8 +1,24 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   purge: [],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      maxHeight: {
+        0: '0',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        full: '100%'
+      },
+      height: {
+        ...defaultTheme.height,
+        full: '100%',
+        '30r': '30rem',
+        '40r': '40rem'
+      }
+    }
   },
   variants: {
     extend: {}

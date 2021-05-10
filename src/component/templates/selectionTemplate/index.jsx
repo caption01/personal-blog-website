@@ -4,8 +4,9 @@ import { FullScreenContainer, Title } from '@/atoms/index';
 import { SelectionCard, TitleTextBlock } from '@/molecules/index';
 
 const Grids = styled.div`
-  ${props => tw`grid grid-cols-3 gap-4 h-full`}
-  max-height: 50%;
+  ${props =>
+    tw`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4 h-full`}
+  ${tw`max-h-3/4 lg:max-h-1/2 overflow-scroll`}
 `;
 
 const Header = styled.div`

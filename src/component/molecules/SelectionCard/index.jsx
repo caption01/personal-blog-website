@@ -12,7 +12,7 @@ const Card = styled.div`
 `;
 
 const Frame = styled.div`
-  ${props => tw`relative w-full h-full mb-16 transform `};
+  ${props => tw`relative w-full h-80 lg:h-full mb-16 transform `};
   ${props => props.active && tw`scale-125`}
 
   transition: 0.3s;

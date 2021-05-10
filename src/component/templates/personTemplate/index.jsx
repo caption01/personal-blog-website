@@ -6,7 +6,12 @@ import { TitleTextBlock, ImageCard } from '@/molecules/index';
 const Grids = styled.div`
   ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full`}
   ${tw`justify-items-center items-center`}
-  max-height: 50%;
+  
+  ${tw`max-h-full lg:max-h-full`}
+`;
+
+const CenterLayout = styled.div`
+  ${tw`flex items-center h-full`}
 `;
 
 const Description = () => (
@@ -28,17 +33,19 @@ const Frame = styled.div`
 const PersonTemplate = () => (
   <section id="person">
     <FullScreenContainer>
-      <Grids>
-        <Description />
-        <Frame>
-          <ImageCard
-            src="/web-dev-image.svg"
-            alt="image"
-            title="quality"
-            size="lg"
-          />
-        </Frame>
-      </Grids>
+      <CenterLayout>
+        <Grids>
+          <Description />
+          <Frame>
+            <ImageCard
+              src="/web-dev-image.svg"
+              alt="image"
+              title="quality"
+              size="lg"
+            />
+          </Frame>
+        </Grids>
+      </CenterLayout>
     </FullScreenContainer>
   </section>
 );

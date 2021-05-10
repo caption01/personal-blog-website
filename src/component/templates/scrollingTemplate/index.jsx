@@ -16,7 +16,11 @@ const stacks = [
 const Grids = styled.div`
   ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full`}
   ${tw`justify-items-center items-stretch`}
-  max-height: 50%;
+  ${tw`max-h-full lg:max-h-1/2`}
+`;
+
+const CenterLayout = styled.div`
+  ${tw`flex items-center h-full`}
 `;
 
 const Center = styled.div`
@@ -25,6 +29,7 @@ const Center = styled.div`
 
 const ScrollingBox = styled.div`
   ${tw`flex w-full overflow-scroll shadow-inner`}
+  ${tw`max-h-3/4 md:max-h-full`}
 `;
 
 const Box = styled.div`
@@ -40,16 +45,18 @@ const Description = () => (
 const ScrollingImageTemplate = () => (
   <section id="stack">
     <FullScreenContainer>
-      <Grids>
-        <Description />
-        <ScrollingBox>
-          {map(stacks, ({ title, path }) => (
-            <Box key={path}>
-              <ImageCard src={path} alt="imgs" title={title} size="md" />
-            </Box>
-          ))}
-        </ScrollingBox>
-      </Grids>
+      <CenterLayout>
+        <Grids>
+          <Description />
+          <ScrollingBox>
+            {map(stacks, ({ title, path }) => (
+              <Box key={path}>
+                <ImageCard src={path} alt="imgs" title={title} size="md" />
+              </Box>
+            ))}
+          </ScrollingBox>
+        </Grids>
+      </CenterLayout>
     </FullScreenContainer>
   </section>
 );
