@@ -4,7 +4,7 @@ import { TextIcons, FullScreenContainer } from '@/atoms/index';
 import { TitleTextBlock, ImageCard } from '@/molecules/index';
 
 const Grids = styled.div`
-  ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full`}
+  ${tw`grid grid-cols-1 lg:grid-cols-2 gap-8 h-full relative`}
   ${tw`justify-items-center items-center`}
   
   ${tw`max-h-full lg:max-h-full`}

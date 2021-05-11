@@ -6,7 +6,7 @@ import { useFadeInFadeOut, useUnderline } from '@/utility/styles';
 
 const Grids = styled.div`
   ${tw`grid grid-cols-1 gap-8 h-full relative shadow-md`}
-  ${tw`max-h-full lg:max-h-3/4`}
+  ${tw`max-h-3/4`}
 `;
 
 const StyledText = styled.div`
@@ -21,6 +21,12 @@ const BoxIcon = styled.div`
   ${tw`absolute flex`}
   top: 2rem;
   right: 2rem;
+`;
+
+const StyledImage = styled.img`
+  ${tw`absolute w-80 h-80 z-10`}
+  bottom: -8rem;
+  right: 0;
 `;
 
 const texts = [
@@ -71,6 +77,7 @@ const LandingTemplate = ({ done, onSkip, onFinish }) => {
               setMoblie
             />
           </BoxIcon>
+          <StyledImage src="/background/bg-lost.svg" alt="as" />
         </Grids>
       </FullScreenContainer>
     </section>
