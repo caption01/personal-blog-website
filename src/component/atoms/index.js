@@ -6,6 +6,7 @@ import FullScreenContainer from './layout';
 import LinkButton from './linkButton';
 import Spacer from './spacer';
 import AntdIcons from './antIcons';
+import Circle from './circle';
 
 export {
   Header,
@@ -17,5 +18,6 @@ export {
   FullScreenContainer,
   LinkButton,
   Spacer,
-  AntdIcons
+  AntdIcons,
+  Circle
 };

@@ -5,6 +5,7 @@ import TitleTextBlock from './titleTextBlock';
 import ImageCard from './imageCard';
 import SelectionCard from './selectionCard';
 import Footer from './footer';
+import BackButton from './backButton';
 
 export {
   TopNavbar,
@@ -13,5 +14,6 @@ export {
   TitleTextBlock,
   ImageCard,
   SelectionCard,
-  Footer
+  Footer,
+  BackButton
 };
