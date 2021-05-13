@@ -2,13 +2,18 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import { Container } from '@/atoms/index';
-import { StickTopBackButton } from '@/organisms/index';
+import {
+  StickTopBackButton,
+  ProjectCard,
+  CenterTopic
+} from '@/organisms/index';
 
 const ProjectPage = () => (
   <div>
     <StickTopBackButton />
+    <CenterTopic title="PROJECT" />
     <Container>
-      <div>xxx</div>
+      <ProjectCard />
     </Container>
   </div>
 );

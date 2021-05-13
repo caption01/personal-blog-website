@@ -7,6 +7,7 @@ import LinkButton from './linkButton';
 import Spacer from './spacer';
 import AntdIcons from './antIcons';
 import Circle from './circle';
+import Card from './card';
 
 export {
   Header,
@@ -20,5 +21,6 @@ export {
   LinkButton,
   Spacer,
   AntdIcons,
-  Circle
+  Circle,
+  Card
 };
