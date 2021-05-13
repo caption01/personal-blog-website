@@ -2,7 +2,7 @@ import { Header, Title, Text } from './typography';
 import Icons from './icons';
 import ImageCover from './images';
 import TextIcons from './textIcons';
-import FullScreenContainer from './layout';
+import { FullScreenContainer, Container } from './layout';
 import LinkButton from './linkButton';
 import Spacer from './spacer';
 import AntdIcons from './antIcons';
@@ -16,6 +16,7 @@ export {
   ImageCover,
   TextIcons,
   FullScreenContainer,
+  Container,
   LinkButton,
   Spacer,
   AntdIcons,

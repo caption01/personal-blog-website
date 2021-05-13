@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import { FullScreenContainer } from '@/atoms/index';
+import { Container } from '@/atoms/index';
 import { StickTopBackButton } from '@/organisms/index';
 
 const ProjectPage = () => (
   <div>
     <StickTopBackButton />
-    <FullScreenContainer>
+    <Container>
       <div>xxx</div>
-    </FullScreenContainer>
+    </Container>
   </div>
 );
 

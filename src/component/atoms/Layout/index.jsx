@@ -5,4 +5,8 @@ const FullScreenContainer = styled.div`
   height: 100vh;
 `;
 
-export default FullScreenContainer;
+const Container = styled.div`
+  ${tw`container mx-auto`}
+`;
+
+export { FullScreenContainer, Container };
