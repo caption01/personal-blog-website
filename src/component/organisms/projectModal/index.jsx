@@ -3,7 +3,7 @@ import { map } from 'lodash';
 import { Modal } from '@/atoms/index';
 
 const Tool = ({ name }) => (
-  <span className="border-solid border border-indigo-600 hover:bg-gray-100 p-2">
+  <span className="border-solid border border-indigo-600 hover:bg-gray-100 text-lg p-1">
     {name}
   </span>
 );
@@ -16,12 +16,12 @@ const ProjectModal = ({ data, onClick }) => (
       </Modal.Header>
       <Modal.Body>
         <div className="relative px-6 pt-6 flex-auto">
-          <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
+          <p className="my-4 text-blueGray-500 text-xl leading-relaxed">
             {data?.description}
           </p>
         </div>
         <div className="relative px-6 pb-6 flex-auto">
-          <p className="my-4 font-semibold text-lg leading-relaxed">Tools</p>
+          <p className="my-4 font-semibold text-xl leading-relaxed">Tools</p>
           <div className="flex flex-start gap-4">
             {map(data?.tools, tool => (
               <Tool key={tool} name={tool} />
