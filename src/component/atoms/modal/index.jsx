@@ -21,7 +21,7 @@ const Header = ({ children }) => (
 );
 
 const Body = ({ children }) => (
-  <div className="relative px-6 pt-6 flex-auto">{children}</div>
+  <div className="relative flex-auto">{children}</div>
 );
 
 const Footer = ({ onClick }) => (
