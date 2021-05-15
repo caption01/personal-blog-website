@@ -2,5 +2,12 @@ import TopNavbarWithIcon from './topNavbarWithIcon';
 import StickTopBackButton from './stickTopBackButton';
 import ProjectCard from './projectCard';
 import CenterTopic from './centerTopic';
+import ProjectModal from './projectModal';
 
-export { TopNavbarWithIcon, StickTopBackButton, ProjectCard, CenterTopic };
+export {
+  TopNavbarWithIcon,
+  StickTopBackButton,
+  ProjectCard,
+  CenterTopic,
+  ProjectModal
+};

@@ -5,9 +5,9 @@ const ProjectCardLayout = styled.div`
   ${tw`mx-auto lg:max-w-3/4`}
 `;
 
-const ProjectCard = () => (
+const ProjectCard = ({ onClick }) => (
   <ProjectCardLayout>
-    <Card src="/graphql-icon.png" height={300} />;
+    <Card src="/graphql-icon.png" height={300} onClick={onClick} />;
   </ProjectCardLayout>
 );
 

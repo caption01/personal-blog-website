@@ -20,7 +20,7 @@ const CardFooter = styled.div`
   ${tw`flex justify-center w-full h-20 mt-8`}
 `;
 
-const Card = ({ src, alt = 'image', height, width }) => {
+const Card = ({ src, alt = 'image', height, width, onClick }) => {
   const ratio = 16 / 9;
   const calWidth = width || height * ratio;
   const calHeigth = height || width / ratio;
@@ -32,7 +32,7 @@ const Card = ({ src, alt = 'image', height, width }) => {
           <ImageCover src={src} alt={alt} />
         </CardImageLayout>
         <CardFooter>
-          <Button title="Open" />
+          <Button title="Open" onClick={onClick} />
         </CardFooter>
       </CardLayout>
     </Layout>
