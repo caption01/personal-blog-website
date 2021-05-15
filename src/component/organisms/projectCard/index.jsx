@@ -1,4 +1,5 @@
 import tw, { styled } from 'twin.macro';
+
 import { Card } from '@/atoms/index';
 
 const ProjectCardLayout = styled.div`

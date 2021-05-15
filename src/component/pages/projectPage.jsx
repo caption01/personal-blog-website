@@ -30,7 +30,9 @@ const ProjectPage = () => {
       <Container>
         <ProjectCard onClick={() => setShowModal(true)} />
       </Container>
-      {showModal && <ProjectModal data={data[0]} onClick={setShowModal} />}
+      {showModal && (
+        <ProjectModal data={data[0]} onClick={() => setShowModal(false)} />
+      )}
     </div>
   );
 };

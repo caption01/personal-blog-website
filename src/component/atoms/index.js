@@ -8,6 +8,7 @@ import Spacer from './spacer';
 import AntdIcons from './antIcons';
 import Circle from './circle';
 import Card from './card';
+import Modal from './modal';
 
 export {
   Header,
@@ -22,5 +23,6 @@ export {
   Spacer,
   AntdIcons,
   Circle,
-  Card
+  Card,
+  Modal
 };
