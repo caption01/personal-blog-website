@@ -3,7 +3,7 @@ import { map } from 'lodash';
 import { Modal } from '@/atoms/index';
 
 const Tool = ({ name }) => (
-  <span className="border-solid border border-indigo-600 hover:bg-gray-100 m-4 p-2">
+  <span className="border-solid border border-indigo-600 hover:bg-gray-100 p-2">
     {name}
   </span>
 );
@@ -22,9 +22,11 @@ const ProjectModal = ({ data, onClick }) => (
         </div>
         <div className="relative px-6 pb-6 flex-auto">
           <p className="my-4 font-semibold text-lg leading-relaxed">Tools</p>
-          {map(data?.tools, tool => (
-            <Tool key={tool} name={tool} />
-          ))}
+          <div className="flex flex-start gap-4">
+            {map(data?.tools, tool => (
+              <Tool key={tool} name={tool} />
+            ))}
+          </div>
         </div>
       </Modal.Body>
     </Modal.Card>
