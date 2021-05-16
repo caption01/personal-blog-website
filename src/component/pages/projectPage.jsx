@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Children, useState } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
@@ -19,13 +19,33 @@ const data = [
       'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code',
     link: '',
     tools: ['NextJs', 'Antd', 'StyledComponent', 'AWS-Service']
+  },
+  {
+    id: '2',
+    name: 'Enres.',
+    description:
+      'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code',
+    link: '',
+    tools: ['NextJs', 'Antd', 'StyledComponent', 'AWS-Service']
+  },
+  {
+    id: '3',
+    name: 'Enres.',
+    description:
+      'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code',
+    link: '',
+    tools: ['NextJs', 'Antd', 'StyledComponent', 'AWS-Service']
   }
 ];
+
+const Page = ({ children }) => (
+  <div className="relative min-h-screen">{children}</div>
+);
 
 const ProjectPage = () => {
   const [showModal, setShowModal] = useState(false);
   return (
-    <div>
+    <Page>
       <StickTopBackButton />
       <CenterTopic title="PROJECT" />
       <Container>
@@ -38,7 +58,7 @@ const ProjectPage = () => {
       {showModal && (
         <ProjectModal data={data[0]} onClick={() => setShowModal(false)} />
       )}
-    </div>
+    </Page>
   );
 };
 
