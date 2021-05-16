@@ -16,13 +16,18 @@ const ProjectModal = ({ data, onClick }) => (
       </Modal.Header>
       <Modal.Body>
         <div className="relative px-6 pt-6 flex-auto">
-          <p className="my-4 text-blueGray-500 text-xl leading-relaxed">
-            {data?.description}
-          </p>
+          {map(data?.description, (desc, idx) => (
+            <p
+              key={idx}
+              className="my-4 text-blueGray-500 text-xl leading-relaxed"
+            >
+              {desc}
+            </p>
+          ))}
         </div>
         <div className="relative px-6 pb-6 flex-auto">
           <p className="my-4 font-semibold text-xl leading-relaxed">Tools</p>
-          <div className="flex flex-start gap-4">
+          <div className="flex flex-start flex-wrap gap-4 items-center">
             {map(data?.tools, tool => (
               <Tool key={tool} name={tool} />
             ))}

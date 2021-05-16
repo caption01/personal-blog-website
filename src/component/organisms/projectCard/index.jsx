@@ -34,7 +34,7 @@ const ProjectCard = ({ data, onClick }) => {
     >
       <Title>{data?.name}</Title>
       <HoverCard hover={hover}>
-        <Card src="/graphql-icon.png" height={400} footer={false} />
+        <Card src={data?.image} height={400} footer={false} />
       </HoverCard>
       {hover && <Popup onClick={onClick} />}
     </ProjectCardLayout>
