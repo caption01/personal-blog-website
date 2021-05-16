@@ -20,7 +20,7 @@ const data = [
       'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code',
       'Platform Availiable on Deskop app and WepApplication'
     ],
-    link: '',
+    link: 'https://enres.co',
     tools: ['NextJs', 'Antd', 'StyledComponent', 'AWS-Service', 'ElectronJs']
   },
   {
@@ -30,17 +30,6 @@ const data = [
     description: [
       'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code'
     ],
-    link: '',
-    tools: ['NextJs', 'Antd', 'StyledComponent', 'AWS-Service']
-  },
-  {
-    id: '3',
-    name: 'Enres.',
-    image: '/project/enres-image.png',
-    description: [
-      'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code'
-    ],
-    link: '',
     tools: ['NextJs', 'Antd', 'StyledComponent', 'AWS-Service']
   }
 ];
