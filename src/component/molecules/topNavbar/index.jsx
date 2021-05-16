@@ -47,6 +47,10 @@ const menu = [
   {
     icon: 'app',
     section: 'select'
+  },
+  {
+    icon: 'mail',
+    section: 'contact'
   }
 ];
 

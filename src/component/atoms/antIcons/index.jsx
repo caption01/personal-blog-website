@@ -7,7 +7,8 @@ import {
   MediumOutlined,
   LinkedinOutlined,
   FastForwardOutlined,
-  UndoOutlined
+  UndoOutlined,
+  MailOutlined
 } from '@ant-design/icons';
 
 const StyledIcon = styled.div`
@@ -32,6 +33,8 @@ const Icon = ({ type }) => {
       return <FastForwardOutlined />;
     case 'undo':
       return <UndoOutlined />;
+    case 'mail':
+      return <MailOutlined />;
 
     default:
       return null;

@@ -6,17 +6,17 @@ import useUnderline from '@/utility/styles/useUnderline';
 
 const menu = [
   {
-    type: 'facebook',
+    icon: 'facebook',
     link: 'https://www.facebook.com/nutchapon.hanouypornlert/',
     path: '/facebook-icon.png'
   },
   {
-    type: 'linkin',
+    icon: 'linkin',
     link: 'https://www.linkedin.com/in/nutchapon-hanouypornlert-85794a174/',
     path: '/linkedin-icon.png'
   },
   {
-    type: 'medium',
+    icon: 'medium',
     link: 'https://medium.com/@nhcoding',
     path: '/medium-icon.svg'
   }
@@ -31,10 +31,10 @@ const Menu = styled.div`
   transition: 0.5s;
 `;
 
-const MenuIcon = ({ path, link, type }) => (
+const MenuIcon = ({ path, link, icon }) => (
   <Menu>
     <a key={path} target="_blank" href={link} rel="noreferrer">
-      <AntdIcons type={type} size="mdlg" />
+      <AntdIcons type={icon} size="mdlg" />
     </a>
   </Menu>
 );
@@ -42,17 +42,19 @@ const MenuIcon = ({ path, link, type }) => (
 const MenuWithUnderLine = useUnderline(MenuIcon);
 
 const Footer = () => (
-  <Navbar>
-    {map(menu, ({ link, path, type }) => (
-      <MenuWithUnderLine
-        key={type}
-        link={link}
-        path={path}
-        type={type}
-        line={false}
-      />
-    ))}
-  </Navbar>
+  <section id="contact">
+    <Navbar>
+      {map(menu, ({ link, path, icon }) => (
+        <MenuWithUnderLine
+          key={icon}
+          link={link}
+          path={path}
+          icon={icon}
+          line={false}
+        />
+      ))}
+    </Navbar>
+  </section>
 );
 
 export default Footer;
