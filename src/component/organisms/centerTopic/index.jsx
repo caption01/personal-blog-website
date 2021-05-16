@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import { Header } from '@/atoms/index';
 import { TitleTextBlock } from '@/molecules/index';
 
 const Topic = styled.div`
@@ -10,9 +9,7 @@ const Topic = styled.div`
 
 const CenterTopic = ({ title = 'sample' }) => (
   <Topic>
-    <Header>
-      <TitleTextBlock title={title} />
-    </Header>
+    <TitleTextBlock title={title} />
   </Topic>
 );
 

@@ -5,7 +5,7 @@ const Layout = ({ children }) => (
 );
 
 const Main = ({ children }) => (
-  <div className="relative w-auto my-6 mx-auto max-w-3xl">{children}</div>
+  <div className="relative w-auto my-6 p-6 mx-auto max-w-3xl">{children}</div>
 );
 
 const Content = ({ children }) => (

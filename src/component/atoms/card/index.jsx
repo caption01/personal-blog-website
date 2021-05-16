@@ -3,7 +3,7 @@ import ImageCover from '../images';
 import Button from '../button';
 
 const Layout = styled.div`
-  ${tw`m-8 p-8 shadow-md`}
+  ${tw`p-8 shadow-md`}
 `;
 
 const CardLayout = styled.div`
@@ -20,7 +20,14 @@ const CardFooter = styled.div`
   ${tw`flex justify-center w-full h-20 mt-8`}
 `;
 
-const Card = ({ src, alt = 'image', height, width, onClick }) => {
+const Card = ({
+  src,
+  alt = 'image',
+  height,
+  width,
+  onClick,
+  footer = true
+}) => {
   const ratio = 16 / 9;
   const calWidth = width || height * ratio;
   const calHeigth = height || width / ratio;
@@ -31,9 +38,11 @@ const Card = ({ src, alt = 'image', height, width, onClick }) => {
         <CardImageLayout height={height && calHeigth} width={width && calWidth}>
           <ImageCover src={src} alt={alt} />
         </CardImageLayout>
-        <CardFooter>
-          <Button title="Open" onClick={onClick} />
-        </CardFooter>
+        {footer && (
+          <CardFooter>
+            {onClick && <Button title="Open" onClick={onClick} />}
+          </CardFooter>
+        )}
       </CardLayout>
     </Layout>
   );

@@ -9,6 +9,7 @@ import AntdIcons from './antIcons';
 import Circle from './circle';
 import Card from './card';
 import Modal from './modal';
+import Button from './button';
 
 export {
   Header,
@@ -24,5 +25,6 @@ export {
   AntdIcons,
   Circle,
   Card,
-  Modal
+  Modal,
+  Button
 };

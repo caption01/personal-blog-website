@@ -2,13 +2,14 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import { Container } from '@/atoms/index';
+import { Container, Spacer } from '@/atoms/index';
 import {
   StickTopBackButton,
   ProjectCard,
   CenterTopic,
   ProjectModal
 } from '@/organisms/index';
+import { map } from 'lodash';
 
 const data = [
   {
@@ -28,7 +29,11 @@ const ProjectPage = () => {
       <StickTopBackButton />
       <CenterTopic title="PROJECT" />
       <Container>
-        <ProjectCard onClick={() => setShowModal(true)} />
+        {map(data, d => (
+          <Spacer pt={8} pr={8} pb={8} pl={8}>
+            <ProjectCard data={d} onClick={() => setShowModal(true)} />
+          </Spacer>
+        ))}
       </Container>
       {showModal && (
         <ProjectModal data={data[0]} onClick={() => setShowModal(false)} />
