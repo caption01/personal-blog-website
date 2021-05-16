@@ -10,7 +10,7 @@ const Grids = styled.div`
 `;
 
 const Header = styled.div`
-  ${props => tw`text-center mx-auto mb-32 w-1/2`}
+  ${props => tw`text-center mx-auto mb-32 w-full md:w-1/2`}
 `;
 
 const Col = styled.div`
