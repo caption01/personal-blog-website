@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro';
 
 import { FullScreenContainer, AntdIcons } from '@/atoms/index';
-import { IconWithFadeIn } from '@/molecules/index';
+import { IconWithFadeIn, AbsoluteImage } from '@/molecules/index';
 import { useFadeInFadeOut, useUnderline } from '@/utility/styles';
 
 const Grids = styled.div`
@@ -77,7 +77,12 @@ const LandingTemplate = ({ done, onSkip, onFinish }) => {
               setMoblie
             />
           </BoxIcon>
-          <StyledImage src="/background/bg-lost.svg" alt="as" />
+          {/* <StyledImage src="/background/bg-lost.svg" alt="as" /> */}
+          <AbsoluteImage
+            position="bottom"
+            src="/background/bg-lost.svg"
+            alt="as"
+          />
         </Grids>
       </FullScreenContainer>
     </section>
@@ -85,3 +90,5 @@ const LandingTemplate = ({ done, onSkip, onFinish }) => {
 };
 
 export default LandingTemplate;
+
+// src="/background/bg-lost.svg" alt="as"

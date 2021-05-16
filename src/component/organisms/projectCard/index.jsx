@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro';
 import { useState } from 'react';
 
-import { Card, Title, Button, Text } from '@/atoms/index';
+import { Card, Title, Button } from '@/atoms/index';
 
 const ProjectCardLayout = styled.div`
   ${tw`relative mx-auto lg:max-w-3/4 text-center`}
