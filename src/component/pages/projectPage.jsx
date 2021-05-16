@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import { Container, Spacer } from '@/atoms/index';
-import { AbsoluteImage } from '@/molecules/index';
 import {
   StickTopBackButton,
   ProjectCard,
@@ -40,7 +39,7 @@ const data = [
 ];
 
 const Page = ({ children }) => (
-  <div className="relative min-h-screen">{children}</div>
+  <div className="relative h-screen overflow-scroll">{children}</div>
 );
 
 const ProjectPage = () => {
@@ -51,19 +50,14 @@ const ProjectPage = () => {
       <CenterTopic title="PROJECT" />
       <Container>
         {map(data, d => (
-          <Spacer pt={8} pr={8} pb={8} pl={8}>
-            <ProjectCard
-              key={d.id}
-              data={d}
-              onClick={() => setShowModal(true)}
-            />
+          <Spacer key={d.id} pt={8} pr={8} pb={8} pl={8}>
+            <ProjectCard data={d} onClick={() => setShowModal(true)} />
           </Spacer>
         ))}
       </Container>
       {showModal && (
         <ProjectModal data={data[0]} onClick={() => setShowModal(false)} />
       )}
-      {/* <AbsoluteImage position="bottom" src="/background/bg-lost.svg" alt="as" /> */}
     </Page>
   );
 };
