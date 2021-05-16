@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import styled from 'styled-components';
-import tw from 'twin.macro';
+import { find, map } from 'lodash';
 
 import { Container, Spacer } from '@/atoms/index';
 import {
@@ -9,7 +8,6 @@ import {
   CenterTopic,
   ProjectModal
 } from '@/organisms/index';
-import { map } from 'lodash';
 
 const data = [
   {
@@ -40,6 +38,17 @@ const Page = ({ children }) => (
 
 const ProjectPage = () => {
   const [showModal, setShowModal] = useState(false);
+  const [selectedId, setId] = useState(null);
+
+  const handleOpen = id => {
+    setShowModal(true);
+    setId(id);
+  };
+
+  const handleClose = () => setShowModal(false);
+
+  const selectedProject = find(data, d => d.id === selectedId);
+
   return (
     <Page>
       <StickTopBackButton />
@@ -47,12 +56,12 @@ const ProjectPage = () => {
       <Container>
         {map(data, d => (
           <Spacer key={d.id} pt={8} pr={8} pb={8} pl={8}>
-            <ProjectCard data={d} onClick={() => setShowModal(true)} />
+            <ProjectCard data={d} onClick={handleOpen} />
           </Spacer>
         ))}
       </Container>
       {showModal && (
-        <ProjectModal data={data[0]} onClick={() => setShowModal(false)} />
+        <ProjectModal data={selectedProject} onClick={handleClose} />
       )}
     </Page>
   );

@@ -36,7 +36,7 @@ const ProjectCard = ({ data, onClick }) => {
       <HoverCard hover={hover}>
         <Card src={data?.image} height={400} footer={false} />
       </HoverCard>
-      {hover && <Popup onClick={onClick} />}
+      {hover && <Popup onClick={() => onClick(data?.id)} />}
     </ProjectCardLayout>
   );
 };
