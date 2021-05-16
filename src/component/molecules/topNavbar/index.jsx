@@ -75,11 +75,12 @@ const TopNavbar = () => {
     }
   };
 
-  const delayScroll = debounce(handleScroll, 50);
-
   useEffect(() => {
+    const delayScroll = debounce(handleScroll, 50);
     window.addEventListener('scroll', delayScroll);
-    return () => window.removeEventListener('scroll', delayScroll);
+    return () => {
+      window.removeEventListener('scroll', delayScroll);
+    };
   }, [prevScrollPos, visible]);
 
   return (

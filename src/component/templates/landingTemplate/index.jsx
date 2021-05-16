@@ -77,7 +77,6 @@ const LandingTemplate = ({ done, onSkip, onFinish }) => {
               setMoblie
             />
           </BoxIcon>
-          {/* <StyledImage src="/background/bg-lost.svg" alt="as" /> */}
           <AbsoluteImage
             position="bottom"
             src="/background/bg-lost.svg"

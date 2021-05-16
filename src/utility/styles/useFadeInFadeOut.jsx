@@ -50,6 +50,10 @@ const useFadeInFadeOut = ({ renderItems, onFinish, finished }) => {
       onFinish(true)
     );
     ref.current = renderFnMap;
+
+    return () => {
+      ref.current.map(clearTimeout);
+    };
   }, []);
 
   useEffect(() => refresh(), []);
