@@ -1,21 +1,39 @@
 import tw, { styled } from 'twin.macro';
 
-import { FullScreenContainer, Title } from '@/atoms/index';
+import { FullScreenContainer } from '@/atoms/index';
 import { SelectionCard, TitleTextBlock } from '@/molecules/index';
+import { map } from 'lodash';
 
 const Grids = styled.div`
-  ${props =>
-    tw`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4 h-full`}
+  ${tw`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4 h-full`}
   ${tw`max-h-3/4 lg:max-h-1/2 overflow-scroll`}
 `;
 
 const Header = styled.div`
-  ${props => tw`text-center mx-auto mb-32 w-full md:w-1/2`}
+  ${tw`text-center mx-auto mb-32 w-full md:w-1/2`}
 `;
 
 const Col = styled.div`
-  ${props => tw`w-full h-full`}
+  ${tw`w-full h-full`}
 `;
+
+const data = [
+  {
+    image: '/selection-project.svg',
+    link: 'projects',
+    title: 'PROJECT'
+  },
+  {
+    image: '/selection-blog.svg',
+    link: 'articles',
+    title: 'ARTICLE'
+  },
+  {
+    image: '/selection-demo.svg',
+    link: 'Demos',
+    title: 'DEMO'
+  }
+];
 
 const SelectionTemplate = () => (
   <section id="select">
@@ -24,15 +42,11 @@ const SelectionTemplate = () => (
         <TitleTextBlock title="More 🚀" />
       </Header>
       <Grids>
-        <Col>
-          <SelectionCard src="/project.svg" link="projects" title="PROJECT" />
-        </Col>
-        <Col>
-          <SelectionCard src="/blog.svg" link="blogs" title="ARTICLE" />
-        </Col>
-        <Col>
-          <SelectionCard src="/demo.svg" link="Demos" title="DEMO" />
-        </Col>
+        {map(data, (d, idx) => (
+          <Col key={idx}>
+            <SelectionCard src={d.image} link={d.link} title={d.title} />
+          </Col>
+        ))}
       </Grids>
     </FullScreenContainer>
   </section>

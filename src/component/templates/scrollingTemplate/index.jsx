@@ -6,11 +6,11 @@ import { TitleTextBlock, ImageCard } from '@/molecules/index';
 import { FullScreenContainer } from '@/atoms/index';
 
 const stacks = [
-  { title: 'React', path: '/react-icon.svg' },
-  { title: 'NextJs', path: '/nextjs-icon.png' },
-  { title: 'TailwindCss', path: '/tailwind-icon.svg' },
-  { title: 'Antd', path: '/antd-icon.svg' },
-  { title: 'GraphQL', path: '/graphql-icon.png' }
+  { title: 'React', path: '/stack/react-icon.svg' },
+  { title: 'NextJs', path: '/stack/nextjs-icon.png' },
+  { title: 'TailwindCss', path: '/stack/tailwind-icon.svg' },
+  { title: 'Antd', path: '/stack/antd-icon.svg' },
+  { title: 'GraphQL', path: '/stack/graphql-icon.png' }
 ];
 
 const Grids = styled.div`

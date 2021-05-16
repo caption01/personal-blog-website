@@ -27,7 +27,7 @@ const Description = () => (
 );
 
 const Frame = styled.div`
-  ${props => tw`w-full h-full overflow-scroll shadow-inner`}
+  ${tw`w-full h-full overflow-scroll shadow-inner`}
 `;
 
 const PersonTemplate = () => (
@@ -38,7 +38,7 @@ const PersonTemplate = () => (
           <Description />
           <Frame>
             <ImageCard
-              src="/web-dev-image.svg"
+              src="/person-develop.svg"
               alt="image"
               title="quality"
               size="lg"

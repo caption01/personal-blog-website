@@ -23,12 +23,6 @@ const BoxIcon = styled.div`
   right: 2rem;
 `;
 
-const StyledImage = styled.img`
-  ${tw`absolute w-80 h-80 z-10`}
-  bottom: -8rem;
-  right: 0;
-`;
-
 const texts = [
   ['Hi 👋'],
   ['Welcome', 'To', '🌏 My Spaces 🌏 '],
@@ -89,5 +83,3 @@ const LandingTemplate = ({ done, onSkip, onFinish }) => {
 };
 
 export default LandingTemplate;
-
-// src="/background/bg-lost.svg" alt="as"

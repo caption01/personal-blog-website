@@ -33,7 +33,7 @@ class MyDocument extends Document {
       <Html>
         <Head />
         {/* <link /> */}
-        <link rel="icon" href="/logo-favicon.png" />
+        <link rel="icon" href="/logo.png" />
         <body>
           <Main />
           <NextScript />

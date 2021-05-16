@@ -88,7 +88,7 @@ const TopNavbar = () => {
       <Left>
         <Frame>
           <a href="#main">
-            <ImageCover alt="logo" src="/nh-logo-3.png" />
+            <ImageCover alt="logo" src="/logo.png" />
           </a>
         </Frame>
       </Left>
