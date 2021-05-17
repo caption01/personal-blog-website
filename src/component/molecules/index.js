@@ -7,6 +7,7 @@ import SelectionCard from './selectionCard';
 import Footer from './footer';
 import BackButton from './backButton';
 import AbsoluteImage from './absoluteImage';
+import ArticleBox from './articleBox';
 
 export {
   TopNavbar,
@@ -17,5 +18,6 @@ export {
   SelectionCard,
   Footer,
   BackButton,
-  AbsoluteImage
+  AbsoluteImage,
+  ArticleBox
 };

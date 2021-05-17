@@ -10,6 +10,8 @@ import Circle from './circle';
 import Card from './card';
 import Modal from './modal';
 import Button from './button';
+import Card2 from './card2';
+import Paragraph from './paragraph';
 
 export {
   Header,
@@ -26,5 +28,7 @@ export {
   Circle,
   Card,
   Modal,
-  Button
+  Button,
+  Card2,
+  Paragraph
 };
