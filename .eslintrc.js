@@ -23,7 +23,8 @@ module.exports = {
           ['@/molecules', './src/component/molecules'],
           ['@/organisms', './src/component/organisms'],
           ['@/templates', './src/component/templates'],
-          ['@/utility/styles', './src/utility/styles']
+          ['@/utility/styles', './src/utility/styles'],
+          ['@/mocks', './src/mocks']
         ]
       }
     }

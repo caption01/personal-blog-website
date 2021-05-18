@@ -21,7 +21,7 @@ const ProjectModal = ({ data, onClick }) => (
   <div>
     <Modal.Card onClick={onClick}>
       <Modal.Header>
-        <h3 className="text-3xl font-semibold">{data?.name}</h3>
+        <h3 className="text-3xl font-semibold">{data?.title}</h3>
       </Modal.Header>
       <Modal.Body>
         <div className="relative px-6 pt-6 flex-auto">

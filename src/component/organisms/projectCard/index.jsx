@@ -32,7 +32,7 @@ const ProjectCard = ({ data, onClick }) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <Title>{data?.name}</Title>
+      <Title>{data?.title}</Title>
       <HoverCard hover={hover}>
         <Card src={data?.image} height={400} footer={false} />
       </HoverCard>

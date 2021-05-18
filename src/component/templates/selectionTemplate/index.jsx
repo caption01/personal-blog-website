@@ -31,7 +31,8 @@ const data = [
   {
     image: '/selection-demo.svg',
     link: 'Demos',
-    title: 'DEMO'
+    title: 'DEMO',
+    disable: true
   }
 ];
 
@@ -44,7 +45,12 @@ const SelectionTemplate = () => (
       <Grids>
         {map(data, (d, idx) => (
           <Col key={idx}>
-            <SelectionCard src={d.image} link={d.link} title={d.title} />
+            <SelectionCard
+              disable={d?.disable}
+              src={d.image}
+              link={d.link}
+              title={d.title}
+            />
           </Col>
         ))}
       </Grids>
