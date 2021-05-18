@@ -1,7 +1,7 @@
 const projects = [
   {
     id: '1',
-    name: 'Enres.',
+    title: 'Enres.',
     image: '/project/enres-image.png',
     description: [
       'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code',
@@ -12,7 +12,7 @@ const projects = [
   },
   {
     id: '2',
-    name: 'Enres.',
+    title: 'Enres.',
     image: '/project/enres-image.png',
     description: [
       'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code'
