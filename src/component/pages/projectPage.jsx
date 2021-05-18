@@ -8,29 +8,7 @@ import {
   CenterTopic,
   ProjectModal
 } from '@/organisms/index';
-
-const data = [
-  {
-    id: '1',
-    name: 'Enres.',
-    image: '/project/enres-image.png',
-    description: [
-      'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code',
-      'Platform Availiable on Deskop app and WepApplication'
-    ],
-    link: 'https://enres.co',
-    tools: ['NextJs', 'Antd', 'StyledComponent', 'AWS-Service', 'ElectronJs']
-  },
-  {
-    id: '2',
-    name: 'Enres.',
-    image: '/project/enres-image.png',
-    description: [
-      'Enres Co Ltd. is IOT-Platform for monitoring and management.I have join a team as frontend developer our platform structure follow MVC Pattern with clean and maintainable code'
-    ],
-    tools: ['NextJs', 'Antd', 'StyledComponent', 'AWS-Service']
-  }
-];
+import { projects } from '@/mocks/index';
 
 const Page = ({ children }) => (
   <div className="relative h-screen overflow-scroll">{children}</div>
@@ -47,14 +25,14 @@ const ProjectPage = () => {
 
   const handleClose = () => setShowModal(false);
 
-  const selectedProject = find(data, d => d.id === selectedId);
+  const selectedProject = find(projects, d => d.id === selectedId);
 
   return (
     <Page>
       <StickTopBackButton />
       <CenterTopic title="PROJECT" />
       <Container>
-        {map(data, d => (
+        {map(projects, d => (
           <Spacer key={d.id} pt={8} pr={8} pb={8} pl={8}>
             <ProjectCard data={d} onClick={handleOpen} />
           </Spacer>

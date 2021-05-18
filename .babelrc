@@ -13,7 +13,8 @@
           "@/molecules": "./src/component/molecules",
           "@/organisms": "./src/component/organisms",
           "@/templates": "./src/component/templates",
-          "@/utility": "./src/utility"
+          "@/utility": "./src/utility",
+          "@/mocks": "./src/mocks"
         }
       }
     ]
